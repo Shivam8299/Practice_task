@@ -1,5 +1,8 @@
 "use client";
 
+import Buttion from "./Buttion";
+import { motion } from "framer-motion";
+
 function Services() {
   let services = [
   {
@@ -23,26 +26,26 @@ function Services() {
   return (
     <div className="flex flex-col md:flex-row justify-between items-center gap-10 bg-cyan-50 my-12 px-4 lg:px-16 py-12">
       {/* LEFT SECTION */}
-      <div className="w-full md:w-1/2 flex flex-col justify-center items-start text-center md:text-left">
-        <p className="text-[#2BE0f7] text-lg lg:text-xl mb-2 text-center md:text-start">
+      <motion.div 
+      initial={{ opacity: 0, x: -100 }} // start hidden & from right
+      whileInView={{ opacity: 1, x: 0 }} // animate to visible & normal position
+      transition={{ duration: 1, ease: "easeOut" }} // smooth animation
+      viewport={{ once: true, amount: 0.3 }}
+      className="w-full md:w-1/2 lg:w-1/3 md:ml- lg:ml-13 flex flex-col justify-center items-start text-center md:text-left">
+        <p className="text-[#2BE0f7] text-lg lg:text-xl mb-2 text-center md:text-start font-serif">
           SERVICES WE PROVIDE
         </p>
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-snug mb-4">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-snug mb-4 font-serif">
           Our Purpose is To Deliver Excellence in Service and Execution
         </h2>
-        <p className="text-gray-600 mb-6">
+        <p className="text-[#787878] mb-6 font-serif text-sm">
           Repellendus autem ruibusdam et aut officiis debitis aut re
           necessitatibus saepe eveniet ut et voluptates repudianda sint et
           molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
           delectus.
         </p>
-        <button className="relative flex items-center justify-between px-6 py-3 rounded-full rounded-bl-none bg-gradient-to-r from-teal-500 to-emerald-600 hover:from-teal-600 hover:to-emerald-700 text-white shadow-lg mt-8 mx-auto md:mx-0">
-          <span>Read More</span>
-          <span className="ml-4 flex items-center justify-center w-10 h-10 rounded-full bg-white text-2xl text-gray-600">
-            &gt;
-          </span>
-        </button>
-      </div>
+        <Buttion text="Read More"/>
+      </motion.div>
 
       {/* RIGHT SECTION - CARDS */}
       <div className="w-full md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -57,11 +60,11 @@ function Services() {
                 src={item.image}
                 alt={item}
               />
-              <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-              <p className="text-sm mb-3">
+              <h3 className="text-lg font-semibold mb-2 font-serif">{item.title}</h3>
+              <p className="text-sm mb-3 font-serif text-[#787878]">
                 Autem vel eum iure reprehea rui in ea volutae velit...
               </p>
-              <p className="text-[#2BE0f7]">Read More</p>
+              <p className="text-[#2BE0f7] font-serif">Read More</p>
             </div>
           ) : (
             <div
@@ -73,11 +76,11 @@ function Services() {
                 src={item.image}
                 alt={item}
               />
-              <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-              <p className="text-sm mb-3">
+              <h3 className="text-lg font-semibold mb-2 font-serif">{item.title}</h3>
+              <p className="text-sm mb-3 font-serif text-[#787878]">
                 Autem vel eum iure reprehea rui in ea volutae velit...
               </p>
-              <p className="text-[#2BE0f7]">Read More</p>
+              <p className="text-[#2BE0f7] font-serif">Read More</p>
             </div>
           )
         )}
