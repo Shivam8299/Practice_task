@@ -13,9 +13,9 @@ function Navbar() {
           Buy Now
         </button>
       </div>
-      <div className="flex justify-between mx-14 my-4 items-center ">
-        <p className="text-4xl font-bold mr-15 mt-0">Artelligence</p>
-        <ul className="w-full text-gray-600 font-semibold flex gap-6 justify-between max-w-150 mt-2">
+      <div className="flex justify-between mx-4 mb-8 md:mx-8 lg:mx-10 my-4 items-center ">
+        <p className=" text-3xl md:text-4xl font-bold mr-15 mt-0">Artelligence</p>
+        <ul className="hidden w-full text-gray-600 font-semibold lg:flex gap-6 justify-between max-w-150 mt-2">
         <li>
           <Link href="/">Home</Link>
         </li>
