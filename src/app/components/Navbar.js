@@ -63,14 +63,14 @@ function Navbar() {
   return (
     <nav className="w-full">
       {/* Top Strip */}
-      <div className="flex bg-gradient-to-br from-teal-50 to-emerald-50 justify-between items-center py-2 px-6 mt-4">
+      {/* <div className="flex bg-gradient-to-br from-teal-50 to-emerald-50 justify-between items-center py-2 px-6 mt-4">
         <p className="text-gray-600">
           <span className="text-2xl font-semibold">envato</span>market
         </p>
         <button className="text-sm py-2 px-6 bg-[#82B440] text-white rounded-md hover:bg-[#6fa136] transition">
           Buy Now
         </button>
-      </div>
+      </div> */}
 
       {/* Navbar Main */}
       <div className="flex justify-between items-center mx-4 mb-8 md:mx-8 lg:mx-10 my-4">
