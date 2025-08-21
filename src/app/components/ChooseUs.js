@@ -6,7 +6,7 @@ import Buttion from "./Buttion";
 
 function ChooseUs() {
   return (
-    <div className="flex flex-col md:flex-row gap-10 mb-6">
+    <div className="flex flex-col md:flex-row gap-10 mb-6 md:items-center">
       {/* Left Image */}
       <div className="w-full max-h-screen md:w-1/2 px-3 md:px-6">
         <img
@@ -60,7 +60,7 @@ function ChooseUs() {
               Quis autem vel eum iure reprehenderit aui
             </p>
           </div>
-        <div className="w-full flex justify-center md:justify-start ">
+        <div className="w-full flex justify-center md:justify-start mt-4">
           <Buttion text="Read More"/>
         </div>
         </div>
