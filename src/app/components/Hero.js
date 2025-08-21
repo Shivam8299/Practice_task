@@ -78,9 +78,9 @@ function Hero() {
             </p>
           </div>
         </div>
-       <div className="pt-3">
-         <Buttion text="Read More" />
-       </div>
+       <div className="w-full flex justify-center md:justify-start ">
+          <Buttion text="Read More"/>
+        </div>
       </motion.div>
     </div>
   );

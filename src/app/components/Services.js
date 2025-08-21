@@ -44,7 +44,9 @@ function Services() {
           molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
           delectus.
         </p>
-        <Buttion text="Read More"/>
+        <div className="flex justify-center md:justify-start w-full">
+          <Buttion text="Read More"/>
+        </div>
       </motion.div>
 
       {/* RIGHT SECTION - CARDS */}

@@ -60,7 +60,9 @@ function ChooseUs() {
               Quis autem vel eum iure reprehenderit aui
             </p>
           </div>
-          <Buttion text="Read More" />
+        <div className="w-full flex justify-center md:justify-start ">
+          <Buttion text="Read More"/>
+        </div>
         </div>
       </motion.div>
     </div>
