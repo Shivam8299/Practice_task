@@ -24,7 +24,7 @@ function Services() {
     <div className="flex flex-col md:flex-row justify-between items-center gap-10 bg-cyan-50 my-12 px-4 lg:px-16 py-12">
       {/* LEFT SECTION */}
       <div className="w-full md:w-1/2 flex flex-col justify-center items-start text-center md:text-left">
-        <p className="text-[#2BE0f7] text-lg lg:text-xl mb-2">
+        <p className="text-[#2BE0f7] text-lg lg:text-xl mb-2 text-center md:text-start">
           SERVICES WE PROVIDE
         </p>
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-snug mb-4">

@@ -2,7 +2,7 @@
 
 function ChooseUs() {
   return (
-    <div className="flex flex-col md:flex-row gap-10">
+    <div className="flex flex-col md:flex-row gap-10 mb-6">
         <div className="w-full max-h-screen md:w-1/2  px-3 md:px-6">
             <img className="relative lg:bottom-25" src="https://html.designingmedia.com/artelligence/assets/images/choose-image.png"/>
         </div>

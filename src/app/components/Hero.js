@@ -54,7 +54,7 @@ function Hero() {
         </div>
 
         {/* Block 2 */}
-        <div className="flex flex-col lg:flex-row mt-6 gap-4 items-center justify-between lg:items-start">
+        <div className="flex flex-col lg:flex-row mt-6 pt-16 md:pt-2 gap-4 items-center justify-between lg:items-start">
           <img
             className="w-16 md:w-20 lg:w-24"
             src="https://html.designingmedia.com/artelligence/assets/images/about-quality.png"
