@@ -37,7 +37,7 @@ function ChooseUs() {
 
         <div>
           <div className="flex gap-2 items-center mb-2">
-            <span className="ml-4 flex items-center justify-center pb-1 w-9 h-9 rounded-full bg-white text-2xl text-gray-600">
+            <span className="ml-4 flex items-center justify-center pb-1 w-9 h-9 rounded-full text-white bg-[#b0e7f1] text-2xl ">
               &gt;
             </span>
             <p className="text-sm font-medium text-[#787878] font-serif">
@@ -45,7 +45,7 @@ function ChooseUs() {
             </p>
           </div>
           <div className="flex gap-2 items-center mb-2">
-            <span className="ml-4 flex items-center justify-center pb-1 w-9 h-9 rounded-full bg-white text-2xl text-gray-600">
+            <span className="ml-4 flex items-center justify-center pb-1 w-9 h-9 rounded-full bg-[#b0e7f1] text-2xl text-white">
               &gt;
             </span>
             <p className="text-sm font-medium text-[#787878] font-serif">
@@ -53,7 +53,7 @@ function ChooseUs() {
             </p>
           </div>
           <div className="flex gap-2 items-center mb-5">
-            <span className="ml-4 flex items-center justify-center pb-1 w-9 h-9 rounded-full bg-white text-2xl text-gray-600">
+            <span className="ml-4 flex items-center justify-center pb-1 w-9 h-9 rounded-full bg-[#b0e7f1] text-2xl text-white">
               &gt;
             </span>
             <p className="text-sm font-medium text-[#787878] font-serif">
