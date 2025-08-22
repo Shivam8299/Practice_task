@@ -5,6 +5,7 @@ import Buttion from "./components/Buttion";
 import ChooseUs from "./components/ChooseUs";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
+import CaseSudies from "./components/CaseSudies";
 
 function Page() {
   return (
@@ -42,6 +43,7 @@ function Page() {
       <Hero />
       <Services />
       <ChooseUs />
+      <CaseSudies/>
     </div>
   );
 }
