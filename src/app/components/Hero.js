@@ -32,11 +32,11 @@ function Hero() {
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.2 }} // trigger once, when 20% visible
       >
-        <p className="text-xl text-[#2BE0f7] text-center lg:text-start font-serif">ABOUT US</p>
-        <p className="text-2xl md:text-3xl lg:text-4xl font-bold my-4 leading-snug font-serif">
+        <p className="text-xl text-[#2BE0f7] text-center lg:text-start">ABOUT US</p>
+        <p className="text-2xl md:text-3xl lg:text-4xl font-bold my-4 leading-snug">
           Empowering People By Keeping Them Well
         </p>
-        <p className="text-[#787878] text-base font-serif">
+        <p className="text-[#787878] text-base">
           Repellendus autem ruibusdam et aut officiis debitis aut re
           necessitatibus saepe eveniet ut et voluptates repudianda sint et
           molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente

@@ -63,16 +63,16 @@ function CaseStudies() {
       <p className="text-[#2BE0f7] text-sm md:text-lg font-medium text-center uppercase tracking-wide">
         Case Study
       </p>
-      <p className="text-2xl md:text-3xl font-semibold text-center py-3">
+      <p className="text-2xl md:text-3xl lg:text-4xl font-semibold lg:font-bold text-[#262626] text-center py-3">
         Explore Our Case Studies
       </p>
 
       {/* case study Cards */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8 lg:px-28">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8 lg:px-28">
         {data.map((item, index) => (
           <motion.div
             key={index}
-            className="relative h-80 lg:h-85 rounded-2xl shadow-lg overflow-hidden group"
+            className="relative h-80 lg:h-85 rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 hover:-translate-y-2"
             style={{ backgroundImage: `url(${item.image})` }}
             custom={index}
             variants={cardVariants}
@@ -93,7 +93,7 @@ function CaseStudies() {
               </p>
 
               {/* Arrow Button */}
-              <span className="mt-4 flex items-center justify-center w-9 h-9 rounded-full bg-white text-xl text-gray-700">
+              <span className="mt-4 flex items-center justify-center w-9 h-9 rounded-full bg-white text-xl text-gray-700 ">
                 <FiChevronRight />
               </span>
             </div>

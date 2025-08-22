@@ -55,7 +55,7 @@ function Services() {
           i % 2 !== 0 ? (
             <div
               key={i}
-              className="rounded-3xl md:w-50 md:h-70 border-b-[2px] border-[#2BE0f7] p-6 shadow-lg bg-white md:mt-8 hover:text-white hover:bg-gradient-to-r from-[#012038] to-[#099fbb] hover:translate-1.5 flex flex-col justify-center items-center text-center transition-all duration-500"
+              className="rounded-3xl md:w-50 md:h-70 border-b-[2px] border-[#2BE0f7] p-6 shadow-lg bg-white md:mt-8 hover:text-white hover:bg-gradient-to-r from-[#012038] to-[#099fbb] transition-transform duration-300 hover:-translate-y-2 flex flex-col justify-center items-center text-center"
             >
               <img
                 className="rounded-full w-20 h-20 mb-4 p-4 hover:bg-white bg-[#b0e7f1]"
@@ -71,7 +71,7 @@ function Services() {
           ) : (
             <div
               key={i}
-              className=" md:w-50 md:h-70 rounded-3xl p-6 shadow-md bg-white hover:text-white hover:bg-gradient-to-r from-[#012038] to-[#099fbb] hover:translate-1.5 flex flex-col justify-center items-center text-center transition-all duration-500  border-b-[2px] border-[#2BE0f7]"
+              className=" md:w-50 md:h-70 rounded-3xl p-6 shadow-md bg-white hover:text-white hover:bg-gradient-to-r from-[#012038] to-[#099fbb] flex flex-col justify-center items-center text-center border-b-[2px] border-[#2BE0f7] transition-transform duration-300 hover:-translate-y-2"
             >
               <img
                 className="rounded-full w-20 h-20 mb-4 p-4 hover:bg-white bg-[#b0e7f1]"
