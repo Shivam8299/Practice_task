@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 import { Minus, Plus } from "lucide-react";
+import { motion } from "framer-motion";
 import Buttion from "./Buttion";
 
 const faqs = [
@@ -35,7 +36,13 @@ function Faq() {
 
   return (
     <div className="flex flex-col lg:flex-row px-2 md:px-6 lg:px-16 py-4 md:py-6 lg:py-12 bg-gradient-to-br from-teal-50 to-emerald-50 gap-6">
-      <div className="mt-16 w-full lg:max-w-1/2">
+      {/* FAQ Section */}
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <p className="text-lg lg:text-xl uppercase text-center lg:text-start mb-4 md:text-medium md:font-medium text-[#2BE0f7] font-serif">
           faq,s
         </p>
@@ -74,20 +81,37 @@ function Faq() {
             </div>
           ))}
         </div>
-      </div>
-      <div className="mt-6 w-full lg:max-w-1/2 flex flex-col items-center bg-white rounded-3xl">
+      </motion.div>
+
+      {/* Contact Form */}
+      <div className="mt-6 w-full lg:w-1/2 flex flex-col items-center bg-white rounded-3xl">
         <p className="text-2xl pt-10 md:text-3xl text-center md:text-start font-bold leading-snug mb-2 font-serif">
           Need any Help!
         </p>
-        <p className="text-gray-500 mt-4 text-lg border-cyan-400 pl-4 mb-4"> Eiusmod tempor in labore et dolore magna aliqua ruis ultrices gravida sit amet.</p>
-        <form className="w-full px-2 md:px-4  lg:px-8">
-            <input className="p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4 " placeholder="Your name:"></input>
-            <input className="p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4 " placeholder="Email:"></input>
-            <input className="p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4 " placeholder="Phone:"></input>
-            <textArea className="p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4  " rows="5" placeholder="Message"></textArea>
+        <p className="text-gray-500 mt-4 text-lg border-cyan-400 pl-4 mb-4">
+          Eiusmod tempor in labore et dolore magna aliqua ruis ultrices gravida sit amet.
+        </p>
+        <form className="w-full px-2 md:px-4 lg:px-8">
+          <input
+            className="p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
+            placeholder="Your name:"
+          />
+          <input
+            className="p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
+            placeholder="Email:"
+          />
+          <input
+            className="p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
+            placeholder="Phone:"
+          />
+          <textarea
+            className="p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
+            rows="5"
+            placeholder="Message"
+          ></textarea>
         </form>
         <div className="mb-8">
-            <Buttion text="Sumbit Now"/>
+          <Buttion text="Submit Now"/>
         </div>
       </div>
     </div>
