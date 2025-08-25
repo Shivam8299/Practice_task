@@ -6,16 +6,16 @@ import { FiChevronRight } from "react-icons/fi";
 function Footer() {
   return (
     <footer className="bg-[#292929] mt-10 py-12 px-6 md:px-10 lg:px-20">
-      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+          <h2 className="text-2xl text-center lg:text-start sm:text-3xl font-bold text-white mb-6">
             Artelligence
           </h2>
-          <p className="text-gray-300 text-sm leading-relaxed mb-6">
+          <p className="text-gray-300 text-center lg:text-start text-sm leading-relaxed mb-6">
             Ruis aute irure dolor in reprehenderit in volu velit ese ciu nulla
             pariatur excepteur sint oc aecat curidatat nona...
           </p>
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 justify-center">
             <FaFacebookF className="text-gray-200 border border-gray-400 p-2 rounded-full hover:bg-white hover:text-[#1877f2] transition cursor-pointer" size={36} />
             <FaTwitter className="text-gray-200 border border-gray-400 p-2 rounded-full hover:bg-white hover:text-[#1DA1F2] transition cursor-pointer" size={36} />
             <FaLinkedinIn className="text-gray-200 border border-gray-400 p-2 rounded-full hover:bg-white hover:text-[#0A66C2] transition cursor-pointer" size={36} />
@@ -23,7 +23,7 @@ function Footer() {
         </div>
 
         {/* Useful Links part */}
-        <div>
+        <div  className="hidden md:block md:ml-8 lg:ml-0">
           <h3 className="text-xl sm:text-2xl font-semibold text-white mb-6">
             Useful Links
           </h3>
@@ -37,7 +37,7 @@ function Footer() {
         </div>
 
         {/* Services part  */}
-        <div>
+        <div className="hidden lg:block">
           <h3 className="text-xl sm:text-2xl font-semibold text-white mb-6">
             Our Services
           </h3>
@@ -51,7 +51,7 @@ function Footer() {
         </div>
 
         <div>
-          <h3 className="text-xl sm:text-2xl font-semibold text-white mb-6">
+          <h3 className="text-xl sm:text-2xl text-center md:text-start font-semibold text-white mb-6">
             Contact Us
           </h3>
           <p className="text-gray-300 mb-2">📞 +61 3 8376 6284</p>

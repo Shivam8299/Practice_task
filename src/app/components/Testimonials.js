@@ -52,7 +52,7 @@ function Testimonials() {
   const { name, role, text, image } = testimonials[current];
 
   return (
-    <div className="bg-[#EAFCFE] mx-4 py-6 md:py-10 lg:py-14">
+    <div className="bg-[#EAFCFE] md:px-16 lg:px-0 mx-4 py-6 md:py-10 lg:py-14">
       {/* Heading */}
       <div className="text-center">
         <p className="text-[#2BE0f7] text-[18px] md:text-lg font-medium uppercase tracking-wide">
