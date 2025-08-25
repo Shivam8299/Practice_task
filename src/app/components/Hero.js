@@ -33,10 +33,10 @@ function Hero() {
         viewport={{ once: true, amount: 0.2 }} // trigger once, when 20% visible
       >
         <p className="text-xl text-[#2BE0f7] text-center lg:text-start">ABOUT US</p>
-        <p className="text-2xl md:text-3xl lg:text-4xl font-bold my-4 leading-snug">
+        <p className="text-2xl md:text-3xl lg:text-4xl font-bold my-4 leading-snug text-[#262626]">
           Empowering People By Keeping Them Well
         </p>
-        <p className="text-[#787878] text-base">
+        <p className="text-[#787878] text-[18px]">
           Repellendus autem ruibusdam et aut officiis debitis aut re
           necessitatibus saepe eveniet ut et voluptates repudianda sint et
           molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
@@ -46,15 +46,15 @@ function Hero() {
         {/* Block 1 */}
         <div className="flex flex-col lg:flex-row mt-6 gap-4 items-center justify-between lg:items-start ">
           <img
-            className="w-16 md:w-20 lg:w-24"
+            className="w-16 md:w-20 lg:w-[55px]"
             src="https://html.designingmedia.com/artelligence/assets/images/about-customer.png"
             alt="Customer satisfaction"
           />
           <div>
-            <p className="text-lg md:text-xl lg:text-2xl text-center lg:text-start font-semibold text-black font-serif">
+            <p className="text-lg md:text-xl lg:text-[20px] text-center lg:text-start font-semibold text-black font-serif">
               100% Customers Satisfaction
             </p>
-            <p className="text-[#787878] text-base font-serif">
+            <p className="text-[#787878] text-[18px] font-serif">
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
               sint.
             </p>
@@ -64,21 +64,21 @@ function Hero() {
         {/* Block 2 */}
         <div className="flex flex-col lg:flex-row mt-6 pt-16 md:pt-2 gap-4 items-center justify-between lg:items-start ">
           <img
-            className="w-16 md:w-20 lg:w-24"
+            className="w-16 md:w-20 lg:w-[55px]"
             src="https://html.designingmedia.com/artelligence/assets/images/about-quality.png"
             alt="Quality assurance"
           />
           <div>
-            <p className="text-lg md:text-xl text-center lg:text-start lg:text-2xl font-semibold text-black font-serif">
+            <p className="text-lg md:text-xl text-center lg:text-start lg:text-[20px] font-semibold text-black font-serif">
               Quality Assurance Guarantee
             </p>
-            <p className="text-[#787878] text-base font-serif mb-4 md:mb-6">
+            <p className="text-[#787878] text-[18px] font-serif mb-4 md:mb-6">
               Velit officia consequat duis enim velit mollie assu omnis dolor
               repellendus.
             </p>
           </div>
         </div>
-       <div className="w-full flex justify-center md:justify-start ">
+       <div className="w-full flex justify-center lg:justify-start mt-4 ">
           <Buttion text="Read More"/>
         </div>
       </motion.div>

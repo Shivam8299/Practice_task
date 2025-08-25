@@ -35,7 +35,7 @@ function Faq() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row px-2 md:px-6 lg:px-16 py-4 md:py-6 lg:py-12 bg-gradient-to-br from-teal-50 to-emerald-50 gap-6">
+    <div className="flex flex-col lg:flex-row px-2 md:px-6 lg:px-16 py-4 md:py-6 lg:py-12 bg-gradient-to-br from-teal-50 to-emerald-50 gap-4">
       {/* FAQ Section */}
       <motion.div
         initial={{ opacity: 0, x: -100 }}
@@ -46,7 +46,7 @@ function Faq() {
         <p className="text-lg lg:text-xl uppercase text-center lg:text-start mb-4 md:text-medium md:font-medium text-[#2BE0f7] font-serif">
           faq,s
         </p>
-        <p className="text-2xl md:text-3xl lg:text-4xl  text-center lg:text-start font-bold leading-snug mb-6 lg:mb-4 font-serif">
+        <p className="text-2xl md:text-3xl lg:text-[38px]  text-center lg:text-start font-bold leading-snug mb-6 lg:mb-4 font-serif">
           Frequently Asked Questions
         </p>
 
@@ -61,7 +61,7 @@ function Faq() {
               }`}
             >
               <div className="p-2">
-                <h2 className="text-lg font-semibold py-2">{faq.question}</h2>
+                <h2 className="text-[20px] font-semibold py-2">{faq.question}</h2>
                 {openIndex === index && (
                   <p className="text-gray-500 text-base mt-4 border-l-2 border-cyan-400 pl-2">
                     {faq.answer}

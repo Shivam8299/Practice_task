@@ -55,10 +55,10 @@ function Testimonials() {
     <div className="bg-[#EAFCFE] mx-4 py-6 md:py-10 lg:py-14">
       {/* Heading */}
       <div className="text-center">
-        <p className="text-[#2BE0f7] text-sm md:text-lg font-medium uppercase tracking-wide">
+        <p className="text-[#2BE0f7] text-[18px] md:text-lg font-medium uppercase tracking-wide">
           Testimonials
         </p>
-        <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#262626] py-3 mb-3">
+        <p className="text-2xl md:text-3xl lg:text-[38px] font-semibold text-[#262626] py-3 mb-3">
           Hear it From Our Clients
         </p>
       </div>
@@ -79,11 +79,11 @@ function Testimonials() {
           />
 
           {/* Text */}
-          <p className="text-base md:text-lg lg:text-xl text-gray-600 lg:ml-12 md:ml-10 font-serif leading-relaxed">
+          <p className="text-[20px] md:text-lg lg:text-xl text-gray-600 lg:ml-12 md:ml-10 leading-relaxed">
             “{text}”
           </p>
 
-          <p className="text-[#2BE0f7] my-4 text-lg font-semibold lg:ml-12 md:ml-10">
+          <p className="text-[#2BE0f7] my-4 text-lg  lg:ml-12 md:ml-10">
             {name}
           </p>
           <p className="text-lg text-gray-600 lg:ml-12 md:ml-10">{role}</p>

@@ -60,19 +60,19 @@ function CaseStudies() {
 
   return (
     <div className="px-4 md:px-8 lg:px-16 py-10 bg-white">
-      <p className="text-[#2BE0f7] text-sm md:text-lg font-medium text-center uppercase tracking-wide">
+      <p className="text-[#2BE0f7] text-[18px] md:text-lg font-medium text-center uppercase tracking-wide">
         Case Study
       </p>
-      <p className="text-2xl md:text-3xl lg:text-4xl font-semibold lg:font-bold text-[#262626] text-center py-3">
+      <p className="text-2xl md:text-3xl lg:text-[38px] font-semibold lg:font-bold text-[#262626] text-center py-3">
         Explore Our Case Studies
       </p>
 
       {/* case study Cards */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8 lg:px-28">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 lg:px-10 xl:px-16 px-5">
         {data.map((item, index) => (
           <motion.div
             key={index}
-            className="relative h-80 lg:h-85 rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 hover:-translate-y-2"
+            className="relative h-80 lg:h-85 w-auto rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 hover:-translate-y-2"
             style={{ backgroundImage: `url(${item.image})` }}
             custom={index}
             variants={cardVariants}
@@ -88,7 +88,7 @@ function CaseStudies() {
               <button className="text-xs md:text-sm font-semibold px-3 py-1 bg-gradient-to-r from-gray-500 to-gray-700 rounded-lg">
                 {item.title}
               </button>
-              <p className="mt-3 text-base md:text-lg font-semibold leading-snug">
+              <p className="mt-3 text-[20px] md:text-lg font-semibold leading-snug">
                 {item.description}
               </p>
 
