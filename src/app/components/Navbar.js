@@ -24,7 +24,7 @@ function Navbar() {
       <div className="flex justify-between items-center mx-4 mb-8 md:mx-8 lg:mx-10 my-4">
         <p className="text-2xl sm:text-3xl md:text-4xl font-bold">Artelligence</p>
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex gap-6 text-gray-700 font-semibold">
+        <ul className="hidden lg:flex gap-6 text-gray-600 ">
           <li><Link href="/" className="hover:text-teal-600 transition">Home</Link></li>
           <li><Link href="/about" className="hover:text-teal-600 transition">About</Link></li>
           <li><Link href="/services" className="hover:text-teal-600 transition">Services</Link></li>

@@ -13,8 +13,8 @@ import Faq from "./components/Faq";
 function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-teal-100 via-white to-emerald-100 py-4 ">
-      <div className="flex flex-col md:flex-row px-8 gap-10 mb-6 ">
-        <div className="lg:px-10 w-full md:w-1/2 flex justify-center items-center flex-col text-center md:text-left">
+      <div className="flex flex-col md:flex-row px-8 mb-6">
+        <div className="pl-4 w-full md:w-[45%] flex justify-center items-center flex-col text-center md:text-left">
           <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4">
             Bring Force of Artificial Intelligence To Business
           </p>
@@ -22,7 +22,7 @@ function Page() {
             Quis autem vel eum iure reprehenderit aui in ea voluptate velit esse
             ruam nihil molestiae conseuatur.
           </p>
-          <div className="flex gap-6 mt-6 w-full ">
+          <div className="flex gap-4 mt-6 w-full ">
             <Buttion text="Read More" />
             <Buttion text="Contact Us" />
           </div>
@@ -37,7 +37,7 @@ function Page() {
           <img
             src="https://html.designingmedia.com/artelligence/assets/images/banner-image.png"
             alt="AI Business"
-            className="max-w-full h-auto"
+            className="max-w-full h-auto mt-25 "
           />
         </motion.div>
       </div>

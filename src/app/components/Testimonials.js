@@ -12,9 +12,9 @@ const testimonials = [
     image: "https://html.designingmedia.com/artelligence/assets/images/testimonial-image.png",
   },
   {
-    id: 2,
-    name: "Sophia Lee",
-    role: "CTO at InnovateX",
+    id: 1,
+    name: "Peter Johns",
+    role: "Head of Informatics at EBI",
     text: "Quisquam est, qui dolorem ipsum quia dolor sit amet conse aetur, adipisci velit, sed ruia non numquam eius modi temor incidunt ut labore et dolore magnam alieuam zuaerat voluta tem nostrum exercitationem",
     image: "https://html.designingmedia.com/artelligence/assets/images/testimonial-image.png",
   },
@@ -152,3 +152,4 @@ function Testimonials() {
 }
 
 export default Testimonials;
+
