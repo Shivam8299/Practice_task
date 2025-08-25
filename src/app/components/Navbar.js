@@ -34,7 +34,7 @@ function Navbar() {
         </ul>
 
         {/* CTA Button */}
-        <div className="hidden sm:block">
+        <div className="hidden lg:block">
           <Buttion text={"Let's Talk"}/>
         </div>
 
