@@ -35,7 +35,7 @@ function Faq() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row px-2 md:px-6 lg:px-16 py-4 md:py-6 lg:py-12 bg-gradient-to-br from-teal-50 to-emerald-50 gap-4">
+    <div className="flex flex-col lg:flex-row px-2 md:px-6 lg:px-16 py-4 md:py-6 lg:py-12 bg-gradient-to-br from-teal-50 to-emerald-50 gap-4 lg:gap-14">
       {/* FAQ Section */}
       <motion.div
         initial={{ opacity: 0, x: -100 }}
@@ -50,7 +50,7 @@ function Faq() {
           Frequently Asked Questions
         </p>
 
-        <div className="w-full lg:max-w-md mx-auto">
+        <div className="w-full   mx-auto lg:mr-10 ">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -84,7 +84,7 @@ function Faq() {
       </motion.div>
 
       {/* Contact Form */}
-      <div className="mt-6 w-full lg:w-1/2 flex flex-col items-center bg-white rounded-3xl">
+      <div className="mt-6 relative z-10 w-full lg:w-1/2 flex flex-col items-center bg-white rounded-3xl border-b-[2px] border-[#2BE0f7]">
         <p className="text-2xl pt-10 md:text-3xl text-center md:text-start font-bold leading-snug mb-2 font-serif">
           Need any Help!
         </p>
@@ -113,6 +113,9 @@ function Faq() {
         <div className="mb-8">
           <Buttion text="Submit Now"/>
         </div>
+      </div>
+      <div>
+        <img className=" hidden absolute lg:block lg:right-24 " src="https://html.designingmedia.com/artelligence/assets/images/faq-image.png"/>
       </div>
     </div>
   );
