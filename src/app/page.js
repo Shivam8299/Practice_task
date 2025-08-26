@@ -6,13 +6,15 @@ import Services from "./components/Services";
 import CaseSudies from "./components/CaseSudies";
 import Testimonials from "./components/Testimonials";
 import Faq from "./components/Faq";
-import Banner from "./components/banner";
+import BannerHome from "./components/BannerHome";
+
+
 
 
 function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-teal-100 via-white to-emerald-100 py-4 ">
-      <Banner/>
+      <BannerHome/>
       <Hero />
       <Services />
       <ChooseUs />

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Buttion from "./Buttion";
 
-export default function Banner () {
+export default function BannerHome () {
     return (
         <div className="flex flex-col lg:flex-row -gap-10 px-4 md:px-8 mb-6">
         <div className="pl-4 w-full lg:w-[60%] flex justify-center items-center flex-col text-center md:text-left">
