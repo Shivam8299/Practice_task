@@ -8,13 +8,10 @@ import Testimonials from "./components/Testimonials";
 import Faq from "./components/Faq";
 import BannerHome from "./components/BannerHome";
 
-
-
-
 function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-teal-100 via-white to-emerald-100 py-4 ">
-      <BannerHome/>
+      <BannerHome />
       <Hero />
       <Services />
       <ChooseUs />
