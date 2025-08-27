@@ -7,6 +7,7 @@ function page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-teal-100 via-white to-emerald-100">
         <AboutBanner
+        text= "Services"
         about="Our Services"
         details="Ruis autem vel eum iure reprehenderit aui in ea voluptate velit esse
           ruam nihil molestiae conseuatur."

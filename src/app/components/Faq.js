@@ -50,7 +50,7 @@ function Faq() {
           Frequently Asked Questions
         </p>
 
-        <div className="w-full   mx-auto lg:mr-10 ">
+        <div className="w-full mx-auto lg:mr-10 ">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -60,10 +60,10 @@ function Faq() {
                   : "border-none"
               }`}
             >
-              <div className="p-2">
+              <div className="p-2 ">
                 <h2 className="text-[20px] font-semibold py-2">{faq.question}</h2>
                 {openIndex === index && (
-                  <p className="text-gray-500 text-base mt-4 border-l-2 border-cyan-400 pl-2">
+                  <p className="text-gray-500  text-base mt-4 border-l-2 border-cyan-400 pl-2">
                     {faq.answer}
                   </p>
                 )}
