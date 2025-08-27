@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import BannerButton from "./BannerButton";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-export default function AboutBanner({ text, about, details, img}) {
+export default function AboutBanner({ text,text3, about, details, img, page}) {
   
   const pathname = usePathname();
    const [mounted, setMounted] = useState(false);
@@ -18,7 +18,7 @@ export default function AboutBanner({ text, about, details, img}) {
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="pl-6 lg:pl-8 w-full lg:w-[60%] flex justify-center items-center lg:items-start flex-col md:text-left mt-6 lg:mt-14"
+        className="pl-6 lg:pl-10 xl:pl-15  w-full lg:w-[60%] flex justify-center items-center lg:items-start flex-col md:text-left mt-6 lg:mt-14"
       >
         <p className="text-2xl sm:text-4xl md:text-[42px] lg:text-[66px] text-center  lg:text-start font-bold mb-4">
           {about}
@@ -27,7 +27,7 @@ export default function AboutBanner({ text, about, details, img}) {
           {details}
         </p>
         <div className="text-center lg:text-start">
-          <BannerButton text1={text} text2="Home" />
+          <BannerButton text1="Home" text2={text} text3={text3} page={page} />
         </div>
       </motion.div>
       <div className=" w-full  md:w-[55%] md:flex md:justify-center md:items-center pl-[30%] md:pl-0">

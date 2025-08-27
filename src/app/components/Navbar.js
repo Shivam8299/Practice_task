@@ -38,6 +38,7 @@ function Navbar() {
           </li>
           <li>
               <Link
+                onClick={()=>setShowPage(false)}
                 href="/about"
                 className={`transition ${pathname === '/about' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
                 About
@@ -45,6 +46,7 @@ function Navbar() {
           </li>
           <li>
               <Link
+                onClick={()=>setShowPage(false)}
                 href="/services"
                 className={`transition ${pathname === '/services' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
                 Services
@@ -52,6 +54,7 @@ function Navbar() {
           </li>
           <li>
               <Link
+                onClick={()=>setShowPage(false)}
                 href="/projects"
                 className={`transition ${pathname === '/projects' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
                 Projects
@@ -74,14 +77,16 @@ function Navbar() {
               <li>
               <Link
                 href="/teams"
-                className={`transition ${pathname === '/teams' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
+                onClick={()=>setShowPage(false)}
+                className={`transition px-5 py-1 rounded ${pathname === '/teams' ? "text-white bg-green-500  " : "hover:text-teal-600"}`}>
                 Teams
               </Link>
           </li>
           <li>
               <Link
+                onClick={()=>setShowPage(false)}
                 href="/faq"
-                className={`transition ${pathname === '/faq' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
+                className={`transition px-6 py-1 rounded ${pathname === '/faq' || showPage ? "text-white bg-green-500" : "hover:text-teal-600"}`}>
                 Faq's
               </Link>
           </li>
@@ -95,6 +100,7 @@ function Navbar() {
 
           <li>
               <Link
+                onClick={()=>setShowPage(false)}
                 href="/contact"
                 className={`transition ${pathname === '/contact' ? "text-green-600 font-semibold" : "hover:text-teal-600 "}`}>
                 Contact us
@@ -103,8 +109,8 @@ function Navbar() {
         </ul>
 
         {/* CTA Button */}
-        <div className="hidden lg:block">
-          <Buttion text={"Let's Talk"} />
+        <div onClick={()=>setShowPage(false)} className="hidden lg:block">
+          <Buttion  text={"Let's Talk"} />
         </div>
 
         {/* Mobile Menu Button */}
