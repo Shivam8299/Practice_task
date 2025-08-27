@@ -5,9 +5,11 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Buttion from "./Buttion";
+import { FaCaretDown } from "react-icons/fa";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showPage, setShowPage] = useState(false)
   const pathname = usePathname();
 
   const navItems = [
@@ -26,19 +28,78 @@ function Navbar() {
         <p className="text-2xl sm:text-3xl md:text-4xl font-bold">Artelligence</p>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex gap-6 text-gray-600">
-          {navItems.map((item) => (
-            <li key={item.path}>
+        <ul className="hidden xl:ml-6 lg:flex gap-6 xl:gap-10 mt-2 xl:text-[18px] text-gray-600">
+          <li>
               <Link
-                href={item.path}
-                className={`transition ${
-                  pathname === item.path ? "text-green-600 font-semibold" : "hover:text-teal-600"
-                }`}
-              >
-                {item.name}
+                href="/"
+                className={`transition ${pathname === '/' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
+                Home
               </Link>
-            </li>
-          ))}
+          </li>
+          <li>
+              <Link
+                href="/about"
+                className={`transition ${pathname === '/about' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
+                About
+              </Link>
+          </li>
+          <li>
+              <Link
+                href="/services"
+                className={`transition ${pathname === '/services' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
+                Services
+              </Link>
+          </li>
+          <li>
+              <Link
+                href="/projects"
+                className={`transition ${pathname === '/projects' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
+                Projects
+              </Link>
+          </li>
+          <div className="flex gap-1 items-center hover:text-teal-600 relative" >
+            <li>
+              <Link
+                href=""
+                onClick={()=>setShowPage(!showPage)}
+                className={`transition ${showPage ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
+                Pages 
+              </Link>
+          </li>
+          <FaCaretDown className={`transition ${showPage ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}  />
+          </div>
+          
+        { showPage && <div className="p-5 w-48 bg-green-100 rounded-md  absolute lg:right-70 xl:right-90 top-15">
+            <ul className="flex flex-col gap-2 items-start justify-center">
+              <li>
+              <Link
+                href="/teams"
+                className={`transition ${pathname === '/teams' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
+                Teams
+              </Link>
+          </li>
+          <li>
+              <Link
+                href="/faq"
+                className={`transition ${pathname === '/faq' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
+                Faq's
+              </Link>
+          </li>
+            </ul>
+        </div>}
+
+
+
+
+
+
+          <li>
+              <Link
+                href="/contact"
+                className={`transition ${pathname === '/contact' ? "text-green-600 font-semibold" : "hover:text-teal-600 "}`}>
+                Contact us
+              </Link>
+          </li>
         </ul>
 
         {/* CTA Button */}
@@ -67,21 +128,70 @@ function Navbar() {
           <X size={24} />
         </button>
 
-        <div className="flex flex-col mt-16 gap-6 mx-6">
-          {navItems.map((item) => (
-            <Link
-              key={item.path}
-              href={item.path}
-              className={`transition text-lg ${
-                pathname === item.path ? "bg-green-600 font-semibold text-white rounded px-6" : "hover:text-teal-600 px-6"
-              }`}
-              onClick={() => setMenuOpen(false)}
-            >
-              { item.name}
-            </Link>
-          ))}
-          <p className={`transition text-lg  hover:font-semibold hover:text-teal-600 px-6 "`}>Let's Talk</p>
-          
+        <div>
+          <ul className="flex flex-col mt-16 gap-6 mx-6 mb-5">
+          <li>
+              <Link
+                href="/"
+                className={`transition ${pathname === '/' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
+                Home
+              </Link>
+          </li>
+          <li>
+              <Link
+                href="/about"
+                className={`transition ${pathname === '/about' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
+                About
+              </Link>
+          </li>
+          <li>
+              <Link
+                href="/services"
+                className={`transition ${pathname === '/services' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
+                Services
+              </Link>
+          </li>
+          <li>
+              <Link
+                href="/projects"
+                className={`transition ${pathname === '/projects' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
+                Projects
+              </Link>
+          </li>
+          <div className="flex gap-1 items-center">
+            <li>
+              <Link
+                href=""
+                onClick={()=>setShowPage(!showPage)}
+                className={`transition ${showPage ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
+                Pages 
+              </Link>
+          </li>
+          <FaCaretDown className="hover:text-teal-600" />
+          </div>
+          {showPage && <li>
+              <Link
+                href="/teams"
+                className={`transition ${pathname === '/teams' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
+                Teams
+              </Link>
+          </li>}
+          {showPage && <li>
+              <Link
+                href="/faq"
+                className={`transition ${pathname === '/faq' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
+                Faq's
+              </Link>
+          </li>}
+          <li>
+              <Link
+                href="/contact"
+                className={`transition ${pathname === '/contact' ? "text-green-600 font-semibold" : "hover:text-teal-600 "}`}>
+                Contact us
+              </Link>
+          </li>
+        </ul>
+          <p className={`transition  hover:font-semibold hover:text-teal-600 px-6 "`}>Let's Talk</p>
         </div>
       </div>
     </nav>
@@ -89,3 +199,6 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+

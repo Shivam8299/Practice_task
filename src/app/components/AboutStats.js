@@ -39,7 +39,7 @@ export default function AboutStats() {
         {stats.map((item) => (
           <div
             key={item.id}
-            className="bg-white border-b-[2px] border-[#2BE0f7] hover:-translate-y-2 rounded-2xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300"
+            className="bg-white border-b-[2px] border-cyan-600 hover:-translate-y-2 rounded-2xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300"
           >
             <img
                 className="rounded-full w-24 h-24 mb-4 p-4 hover:bg-white bg-[#b0e7f1]"

@@ -1,5 +1,6 @@
 "use client"
 import AboutBanner from "../components/AboutBanner"
+import Information from "./Components/Information"
 function page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-teal-100 via-white to-emerald-100">
@@ -10,7 +11,7 @@ function page() {
                   ruam nihil molestiae conseuatur."
                 img="https://html.designingmedia.com/artelligence/assets/images/sub-bannerimage.png"
                 />
-        
+        <Information/>
     </div>
   )
 }
