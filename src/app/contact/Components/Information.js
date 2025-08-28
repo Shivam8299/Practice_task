@@ -50,17 +50,23 @@ function Information() {
               <h3 className={`font-bold text-xl mb-2 text-gray-900`}>
                 {card.title}
               </h3>
-              <p className={`mb-3 text-base sm:text-[18px] text-[#787878] `}>
-            
-                {(card.id === 2) ? (card.text.split("-").map((part, index) => (
-                <p className="mb-1" key={index}>{part})</p>))) : card.text}
-              </p>
+              <div className="mb-3 text-base sm:text-[18px] text-[#787878]">
+                {card.id === 2 ? (
+                  card.text.split("-").map((part, index) => (
+                    <p className="mb-1" key={index}>
+                      {`${part})`}
+                    </p>
+                  ))
+                ) : (
+                  <p>{card.text}</p>
+                )}
+              </div>
             </div>
           </motion.div>
         ))}
       </div>
       <div className="mt-6 relative z-10 w-full lg:w-1/2 flex flex-col items-center bg-white rounded-3xl border-b-[2px] border-cyan-600">
-        <p className="text-2xl pt-10 md:text-3xl text-center md:text-start font-bold leading-snug mb-2 font-serif">
+        <p className="text-2xl pt-10 md:text-3xl text-center md:text-start font-bold leading-snug mb-2 font-serif ">
           Need any Help!
         </p>
         <p className="text-gray-500 mt-4 text-lg border-cyan-400 pl-4 mb-4">

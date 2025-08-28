@@ -1,4 +1,4 @@
-"use client"
+"use client";
 const faqs = [
   {
     question: "Modi tempora incidunt ut labore et dolore magnam aliquam?",
@@ -24,70 +24,71 @@ const faqs = [
     question: "Autem vel eum iure reprehenderit qui in ea voluptate velit?",
     answer:
       "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet voluta repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus maiores alias consequatur aut perferendis doloribus asperiores repellat",
-  }
+  },
 ];
-
 
 import { useState } from "react";
 import { Minus, Plus } from "lucide-react";
-import { motion } from "framer-motion";
-import Buttion from "../../components/Buttion";
+import { motion, AnimatePresence } from "framer-motion";
 
 function FaqQuestions() {
-     const [openIndex, setOpenIndex] = useState(null);
-    
-      const toggleFAQ = (index) => {
-        setOpenIndex(openIndex === index ? null : index);
-      };
+   const [openIndexes, setOpenIndexes] = useState([]);
+
+  const toggleFAQ = (index) => {
+    setOpenIndexes((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    );
+  };
   return (
-    <div className="w-full px-2 md:px-6 lg:max-w-[75%] m-auto py-10 ">
-        <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <p className="text-lg lg:text-xl uppercase text-center  mb-4 md:text-medium md:font-medium text-[#2BE0f7] font-serif">
+    <div className="w-full flex flex-col items-center justify-center px-4 my-6 lg:my-16">
+      <p className="text-lg lg:text-xl uppercase text-center lg:text-start mb-4 md:text-medium md:font-medium text-[#2BE0f7] font-serif">
           faq,s
         </p>
-        <p className="text-2xl md:text-3xl lg:text-[38px]  text-center  font-bold leading-snug mb-6 lg:mb-8 font-serif">
+        <p className="text-2xl md:text-3xl lg:text-[38px] xl:text-[42px] xl:font-extrabold text-center lg:text-start font-bold leading-snug mb-6  lg:mb-10 font-serif">
           Frequently Asked Questions
         </p>
-
-        <div className="w-full mx-auto lg:mr-10 ">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className={`bg-white mb-6 shadow-md rounded-2xl p-4 flex items-center justify-between ${
-                openIndex === index
-                  ? "border-b-[2px] border-cyan-600"
-                  : "border-none"
-              }`}
-            >
-              <div className="p-2 ">
-                <h2 onClick={() => toggleFAQ(index)} className="text-[20px] text-[#262626] cursor-pointer font-semibold py-2">{faq.question}</h2>
-                {openIndex === index && (
-                  <p className="text-gray-500 text-base  lg:text-[18px] mt-4 border-l-2 border-cyan-400 leading-relaxed pl-2">
-                    {faq.answer}
-                  </p>
-                )}
-              </div>
+      <div className="w-full max-w-[700px]">
+        {faqs.map((faq, index) => (
+          <div
+            key={index}
+            className="bg-white mb-6 shadow-md rounded-2xl p-4 w-full"
+          >
+            {/* Question */}
+            <div className="flex items-center justify-between">
+              <h2 className=" text-base lg:text-[20px] font-medium  md:font-semibold py-2">{faq.question}</h2>
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-8 h-8 md:w-11 md:h-11 rounded-full bg-gradient-to-b from-cyan-400 to-blue-900 flex items-center justify-center text-white shadow-md"
+                className="w-8 h-8 md:w-11 md:h-11 ml-4 sm:ml-2 rounded-full bg-gradient-to-b from-cyan-400 to-blue-900 flex items-center justify-center text-white shadow-md"
               >
-                {openIndex === index ? (
-                  <Minus className="h-5 w-5 m-3 " />
+                {openIndexes.includes(index) ? (
+                  <Minus className="h-5 w-5 m-2" />
                 ) : (
-                  <Plus className="h-5 w-5" />
+                  <Plus className="h-5 w-5 m-2" />
                 )}
               </button>
             </div>
-          ))}
-        </div>
-      </motion.div>
+
+            {/* Answer */}
+            <AnimatePresence>
+              {openIndexes.includes(index) && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <p className="text-gray-500 text-sm sm:text-base lg:text-[20px] mt-4 border-l-2 border-cyan-400 pl-2">
+                    {faq.answer}
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
-export default FaqQuestions
+export default FaqQuestions;

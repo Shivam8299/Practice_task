@@ -1,14 +1,14 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { Minus, Plus } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Buttion from "./Buttion";
 
 const faqs = [
   {
-    question: "Antis unde omnis istye natus error?",
+    question: "Antis unde omnis iste natus error?",
     answer:
-      "Labore et dolore magna aliqua quis ipsum suspendis seultrices gravida risus commo ddolore.",
+      "Labore et dolore magna aliqua quis ipsum suspendis seultrices gravida risus commodo dolore.",
   },
   {
     question: "Sed ut perspiciatis unde omnis iste?",
@@ -22,62 +22,73 @@ const faqs = [
   },
   {
     question: "Where can I get some?",
-    answer:
-      "There are many variations of passages of Lorem Ipsum available.",
+    answer: "There are many variations of passages of Lorem Ipsum available.",
   },
 ];
 
 function Faq() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndexes, setOpenIndexes] = useState([]);
 
   const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+    setOpenIndexes((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    );
   };
 
   return (
-    <div className="flex flex-col lg:flex-row px-2 md:px-6 lg:px-16 py-4 md:py-6 lg:py-12 bg-gradient-to-br from-teal-50 to-emerald-50 gap-4 lg:gap-14">
+    <div className="flex flex-col lg:flex-row px-3 md:px-6 lg:px-16 py-4 md:py-6 lg:py-12 bg-gradient-to-br from-teal-50 to-emerald-50 gap-4 lg:gap-14">
       {/* FAQ Section */}
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.3 }}
+        className="w-full md:px-12 lg:px-0  lg:max-w-[500px]"
       >
         <p className="text-lg lg:text-xl uppercase text-center lg:text-start mb-4 md:text-medium md:font-medium text-[#2BE0f7] font-serif">
           faq,s
         </p>
-        <p className="text-2xl md:text-3xl lg:text-[38px]  text-center lg:text-start font-bold leading-snug mb-6 lg:mb-4 font-serif">
+        <p className="text-2xl md:text-3xl lg:text-[38px] xl:text-[42px] text-center lg:text-start font-bold leading-snug mb-6 lg:mb-4 font-serif">
           Frequently Asked Questions
         </p>
 
-        <div className="w-full mx-auto lg:mr-10 ">
+        <div className="w-full mx-auto">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className={`bg-white mb-6 shadow-md rounded-2xl p-4 flex items-start justify-between ${
-                openIndex === index
-                  ? "border-b-[2px] border-cyan-600"
-                  : "border-none"
-              }`}
+              className="bg-white mb-6 shadow-md rounded-2xl p-4 w-full"
             >
-              <div className="p-2 ">
+              {/* Question */}
+              <div className="flex items-center justify-between">
                 <h2 className="text-[20px] font-semibold py-2">{faq.question}</h2>
-                {openIndex === index && (
-                  <p className="text-gray-500  text-base mt-4 border-l-2 border-cyan-400 pl-2">
-                    {faq.answer}
-                  </p>
-                )}
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-8 h-8 md:w-11 md:h-11 rounded-full bg-gradient-to-b from-cyan-400 to-blue-900 flex items-center justify-center text-white shadow-md"
+                >
+                  {openIndexes.includes(index) ? (
+                    <Minus className="h-5 w-5" />
+                  ) : (
+                    <Plus className="h-5 w-5" />
+                  )}
+                </button>
               </div>
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-8 h-8 md:w-11 md:h-11 rounded-full bg-gradient-to-b from-cyan-400 to-blue-900 flex items-center justify-center text-white shadow-md"
-              >
-                {openIndex === index ? (
-                  <Minus className="h-5 w-5" />
-                ) : (
-                  <Plus className="h-5 w-5" />
+
+              {/* Answer */}
+              <AnimatePresence>
+                {openIndexes.includes(index) && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <p className="text-gray-500 text-base mt-4 border-l-2 border-cyan-400 pl-2">
+                      {faq.answer}
+                    </p>
+                  </motion.div>
                 )}
-              </button>
+              </AnimatePresence>
             </div>
           ))}
         </div>
@@ -111,14 +122,20 @@ function Faq() {
           ></textarea>
         </form>
         <div className="mb-8">
-          <Buttion text="Submit Now"/>
+          <Buttion text="Submit Now" />
         </div>
       </div>
+
+      {/* Background Image */}
       <div>
-        <img className=" hidden absolute lg:block lg:right-24 " src="https://html.designingmedia.com/artelligence/assets/images/faq-image.png"/>
+        <img
+          className="hidden absolute lg:block lg:right-24"
+          src="https://html.designingmedia.com/artelligence/assets/images/faq-image.png"
+        />
       </div>
     </div>
   );
 }
 
 export default Faq;
+
