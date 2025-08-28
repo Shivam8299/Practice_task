@@ -36,7 +36,7 @@ function Faq() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row px-3 md:px-6 lg:px-16 py-4 md:py-6 lg:py-12 bg-gradient-to-br from-teal-50 to-emerald-50 gap-4 lg:gap-14">
+    <div className="flex flex-col lg:flex-row px-3 md:px-6 lg:px-16 py-4 md:py-6 lg:py-12 bg-gradient-to-br from-teal-50 to-emerald-50 gap-4 lg:gap-14 pb-6 lg:pb-20 xl:pb-26">
       {/* FAQ Section */}
       <motion.div
         initial={{ opacity: 0, x: -100 }}

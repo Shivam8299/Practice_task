@@ -4,7 +4,7 @@ import Buttion from "./Buttion";
 
 export default function BannerHome () {
     return (
-        <div className="flex flex-col lg:flex-row px-4 md:px-8 mb-6">
+        <div className="flex flex-col lg:flex-row px-4 md:px-8 mb-6 lg:mb-20">
         <div className="pl-4  w-full lg:w-[45%] flex justify-center items-center flex-col text-center md:text-left">
           <p className="text-2xl sm:text-4xl md:text-[42px] lg:text-[48px] xl:text-[66px]  text-center lg:text-start font-bold mb-4">
             Bring Force of Artificial Intelligence To Business

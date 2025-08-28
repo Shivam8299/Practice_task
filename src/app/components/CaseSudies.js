@@ -59,7 +59,7 @@ function CaseStudies() {
   };
 
   return (
-    <div className="px-4 md:px-8 lg:px-16 py-10 bg-white lg:mt-36">
+    <div className="px-4 md:px-8 lg:px-16 py-10 lg:py-20 xl:py-25 bg-white ">
       <p className="text-[#2BE0f7] text-[18px] md:text-[20px] font-medium text-center uppercase tracking-wide">
         Case Study
       </p>
