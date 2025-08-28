@@ -34,20 +34,20 @@ export default function AboutStats() {
   ];
 
   return (
-    <div className="bg-cyan-50 py-12 px-6">
+    <div className="bg-cyan-50 py-12 px-3 md:px-6 mt-8">
       <div className="grid grid-cols-2  md:grid-cols-4 gap-4 lg:gap-6 max-w-6xl mx-auto mb-8">
         {stats.map((item) => (
           <div
             key={item.id}
-            className="bg-white border-b-[2px] border-cyan-600 hover:-translate-y-2 rounded-2xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300"
+            className="bg-white border-b-[2px] border-cyan-600 hover:-translate-y-2 rounded-3xl shadow-md lg:p-8 px-2 py-4 md:px-4 md:py-8 flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300"
           >
             <img
                 className="rounded-full w-24 h-24 mb-4 p-4 hover:bg-white bg-[#b0e7f1]"
                 src={item.image}
                 alt={item}
               />
-            <h3 className="text-3xl font-bold text-gray-900">{item.value}</h3>
-            <p className="text-gray-600 mt-2">{item.label}</p>
+            <h3 className="text-[24px] md:text-3xl font-bold text-gray-900">{item.value}</h3>
+            <p className="text-gray-600 mt-1 md:mt-2 text-[14px] md:text-lg">{item.label}</p>
           </div>
         ))}
       </div>

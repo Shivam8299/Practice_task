@@ -31,7 +31,7 @@ function Information() {
         <p className="text-[#2BE0f7] text-lg lg:text-2xl mb-2 text-center lg:text-start">
           our details
         </p>
-        <h2 className="text-2xl md:text-[42px]  text-[#262626] font-bold leading-snug mb-4 ">
+        <h2 className="text-2xl md:text-[42px] text-center lg:text-start text-[#262626] font-bold leading-snug mb-4 ">
           Contact Information
         </h2>
         {cards.map((card) => (
@@ -39,7 +39,7 @@ function Information() {
             key={card.id}
             onMouseEnter={() => setHovered(card.id)}
             onMouseLeave={() => setHovered(null)}
-            className="flex flex-row my-10 items-center  gap-4 md:gap-6 border-r-[2px] border-cyan-600 rounded-2xl p-2 sm:p-4 md:p-6 shadow-sm bg-gradient-to-bl from-teal-50 to-bg-white "
+            className="flex flex-row my-10 items-center  gap-4 md:gap-6 border-r-[2px] border-cyan-600 rounded-3xl p-2 sm:p-4 md:p-6 shadow-sm bg-gradient-to-bl from-teal-50 to-bg-white "
           >
             <div
               className={`flex items-center justify-center w-26 h-26 rounded-full bg-cyan-800 shrink-0 hover:transition-all hover:-translate-y-2 duration-300`}

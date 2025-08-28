@@ -22,7 +22,7 @@ function Navbar() {
   ];
 
   return (
-    <nav className="w-full relative z-50">
+    <nav className="w-full mt-2 lg:mt-0 relative z-50 bg-gradient-to-br from-teal-100 to-emerald-50 border border-teal-100">
       {/* Navbar Main */}
       <div className="flex justify-between items-center mx-4 mb-8 md:mx-8 lg:mx-10 my-4">
         <p className="text-2xl sm:text-3xl md:text-4xl font-bold cursor-pointer">Artelligence</p>
@@ -92,12 +92,6 @@ function Navbar() {
           </li>
             </ul>
         </div>}
-
-
-
-
-
-
           <li>
               <Link
                 onClick={()=>setShowPage(false)}
@@ -139,12 +133,14 @@ function Navbar() {
           <li>
               <Link
                 href="/"
+                onClick={() => setMenuOpen(false)}
                 className={`transition ${pathname === '/' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
                 Home
               </Link>
           </li>
           <li>
               <Link
+                onClick={() => setMenuOpen(false)}
                 href="/about"
                 className={`transition ${pathname === '/about' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
                 About
@@ -153,6 +149,7 @@ function Navbar() {
           <li>
               <Link
                 href="/services"
+                onClick={() => setMenuOpen(false)}
                 className={`transition ${pathname === '/services' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
                 Services
               </Link>
@@ -160,6 +157,7 @@ function Navbar() {
           <li>
               <Link
                 href="/projects"
+                onClick={() => setMenuOpen(false)}
                 className={`transition ${pathname === '/projects' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
                 Projects
               </Link>
@@ -177,6 +175,7 @@ function Navbar() {
           </div>
           {showPage && <li>
               <Link
+                onClick={() => setMenuOpen(false)}
                 href="/teams"
                 className={`transition ${pathname === '/teams' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
                 Teams
@@ -184,6 +183,7 @@ function Navbar() {
           </li>}
           {showPage && <li>
               <Link
+                onClick={() => setMenuOpen(false)}
                 href="/faq"
                 className={`transition ${pathname === '/faq' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
                 Faq's
@@ -192,12 +192,13 @@ function Navbar() {
           <li>
               <Link
                 href="/contact"
+                onClick={() => setMenuOpen(false)}
                 className={`transition ${pathname === '/contact' ? "text-green-600 font-semibold" : "hover:text-teal-600 "}`}>
                 Contact us
               </Link>
           </li>
         </ul>
-          <p className={`transition  hover:font-semibold hover:text-teal-600 px-6 cursor-pointer "`}>Let's Talk</p>
+          <p  onClick={() => setMenuOpen(false)} className={`transition  hover:font-semibold hover:text-teal-600 px-6 cursor-pointer "`}>Let's Talk</p>
         </div>
       </div>
     </nav>
