@@ -35,7 +35,7 @@ function Services() {
         <p className="text-[#2BE0f7] text-lg lg:text-xl mb-2 text-center lg:text-start">
           SERVICES WE PROVIDE
         </p>
-        <h2 className="text-2xl md:text-[42px] lg:text-[38px] text-[#262626] font-bold leading-snug mb-4 ">
+        <h2 className="text-2xl md:text-[32] md:px-20 lg:px-0 lg::text-[42px] lg:text-[38px] text-[#262626] font-bold leading-snug mb-4 ">
           Our Purpose is To Deliver Excellence in Service and Execution
         </h2>
         <p className="text-[#787878] mb-6  text-[18px]">

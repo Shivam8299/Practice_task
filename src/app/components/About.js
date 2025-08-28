@@ -7,7 +7,7 @@ import { FiChevronRight } from "react-icons/fi";
 function About() {
   return (
     <div>
-      <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 md:px-12 lg:px-20 gap-16 lg:py-12">
+      <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between px-2 sm:px-4 md:px-12 lg:px-20 gap-16 lg:py-12">
         {/* Image Section */}
         <div className="relative w-full md:max-w-md lg:w-1/2 flex justify-center px-3">
           {/* Main Image */}

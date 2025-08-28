@@ -223,7 +223,7 @@ function Testimonials() {
       </div>
 
       {/* Testimonial Card */}
-      <div className="flex justify-center items-center mx-auto px-6 relative max-w-4xl ">
+      <div className="flex justify-center items-center mx-auto px-4 relative max-w-4xl ">
         <AnimatePresence mode="popLayout" custom={direction}>
           <motion.div
             key={current}

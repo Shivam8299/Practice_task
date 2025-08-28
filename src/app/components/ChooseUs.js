@@ -39,7 +39,7 @@ function ChooseUs() {
             <span className=" hidden lg:flex ml-4 items-center justify-center w-8 h-8 rounded-full text-white bg-[#b0e7f1] text-2xl ">
               <FiChevronRight size={25}/>
             </span>
-            <p className="text-[18px] font-[18px] text-[#787878] ">
+            <p className="text-[16px] sm:text-[18px] font-[18px] text-[#787878] ">
               Quis autem vel eum iure reprehenderit aui
             </p>
           </div>
@@ -47,7 +47,7 @@ function ChooseUs() {
             <span className="ml-4 hidden lg:flex items-center justify-center w-8 h-8 rounded-full bg-[#b0e7f1] text-2xl text-white">
               <FiChevronRight size={25}/>
             </span>
-            <p className="text-[18px]  font-[18px] text-[#787878] ">
+            <p className="text-[16px] sm:text-[18px] font-[18px] text-[#787878] ">
               Quis autem vel eum iure reprehenderit aui
             </p>
           </div>
@@ -55,7 +55,7 @@ function ChooseUs() {
             <span className="ml-4 hidden lg:flex justify-center items-center w-8 h-8 rounded-full bg-[#b0e7f1] text-2xl text-white">
              <FiChevronRight size={25}/>
             </span>
-            <p className="text-[18px] font-[18px] text-[#787878] ">
+            <p className="text-[16px] sm:text-[18px] font-[18px] text-[#787878] ">
               Quis autem vel eum iure reprehenderit aui
             </p>
           </div>
