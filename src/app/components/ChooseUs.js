@@ -5,11 +5,11 @@ import { FiChevronRight } from "react-icons/fi";
 
 function ChooseUs() {
   return (
-    <div className="flex flex-col-reverse lg:flex-row gap-6 mb-6 md:items-center">
+    <div className="flex flex-col-reverse lg:flex-row gap-4 lg:gap-0 mb-6  lg:mb-12 md:items-center lg:px-10  ">
       {/* Left Image */}
-      <div className="w-full md:w-150 max-h-screen lg:w-1/2 px-3 md:px-6">
+      <div className="w-full md:w-150 max-h-screen lg:w-1/2 px-3 lg:px-0">
         <img
-          className="relative lg:bottom-25"
+          className=""
           src="https://html.designingmedia.com/artelligence/assets/images/choose-image.png"
           alt="Choose Us"
         />
@@ -17,13 +17,13 @@ function ChooseUs() {
 
       {/* Right Content with Animation */}
       <motion.div
-        className="px-3 md:px-6 w-full lg:w-[38%]"
+        className="px-3  md:px-6 w-full lg:w-[38%] lg:mt-10"
         initial={{ opacity: 0, x: -100 }} // start hidden & from right
         whileInView={{ opacity: 1, x: 0 }} // animate to visible & normal position
         transition={{ duration: 0.8, ease: "easeOut" }} // smooth animation
         viewport={{ once: true, amount: 0.3 }} // only once, trigger when 30% visible
       >
-        <p className="text-lg text-center lg:text-start mb-4 md:text-medium md:font-medium text-[#2BE0f7]">
+        <p className="text-lg uppercase text-center lg:text-start mb-4 md:text-medium md:font-medium text-[#2BE0f7]">
           Why Choose Us
         </p>
         <h2 className="text-2xl md:text-3xl lg:text-[38px] text-center lg:text-start font-bold leading-snug mb-4">

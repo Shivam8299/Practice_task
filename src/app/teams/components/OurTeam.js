@@ -50,8 +50,8 @@ function OurTeam() {
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.2, // stagger effect
-        duration: 0.6,
+        delay: i * 0.1, 
+        duration: 0.4,
         ease: "easeOut",
       },
     }),

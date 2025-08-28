@@ -59,7 +59,7 @@ function Information() {
           </motion.div>
         ))}
       </div>
-      <div className="mt-6 relative z-10 w-full lg:w-1/2 flex flex-col items-center bg-white rounded-3xl border-b-[2px] border-[#2BE0f7]">
+      <div className="mt-6 relative z-10 w-full lg:w-1/2 flex flex-col items-center bg-white rounded-3xl border-b-[2px] border-cyan-600">
         <p className="text-2xl pt-10 md:text-3xl text-center md:text-start font-bold leading-snug mb-2 font-serif">
           Need any Help!
         </p>

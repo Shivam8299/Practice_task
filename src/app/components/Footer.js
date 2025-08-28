@@ -5,7 +5,7 @@ import { FiChevronRight } from "react-icons/fi";
 
 function Footer() {
   return (
-    <footer className="bg-[#292929] mt-10 py-12 px-6 md:px-10 lg:px-20">
+    <footer className="bg-[#292929] py-12 md:pt-16 lg:pt-25 px-6 md:px-10 lg:px-20">
       <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <div>
           <h2 className="text-2xl text-center lg:text-start sm:text-3xl font-bold text-white mb-6">
