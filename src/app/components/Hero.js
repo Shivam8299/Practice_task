@@ -6,7 +6,7 @@ import Buttion from "./Buttion";
 
 function Hero() {
   return (
-    <div className="flex flex-col lg:flex-row items-center md:items-start justify-center lg:justify-between px-4  xl:px-20 gap-12 py-12">
+    <div className=" max-w-[1600px] m-auto flex flex-col lg:flex-row items-center md:items-start justify-center lg:justify-between px-4  xl:px-20 2xl:px-40 3xl:px-60  gap-12 py-12">
       {/* Image Section */}
       <div className="relative w-full lg:w-1/2 flex  justify-center">
         {/* Main Image */}
@@ -32,8 +32,8 @@ function Hero() {
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.2 }} // trigger once, when 20% visible
       >
-        <p className="text-xl text-[#2BE0f7] text-center lg:text-start">ABOUT US</p>
-        <p className="text-center lg:text-start text-2xl md:text-3xl lg:text-4xl font-bold my-2 leading-snug text-[#262626]">
+        <p className="text-xl text-teal-400 text-center lg:text-start">ABOUT US</p>
+        <p className="text-center lg:text-start text-2xl md:text-3xl lg:text-4xl xl:text-[42px] 2xl:text-[46px] font-bold my-2 leading-snug text-[#262626]">
           Empowering People By Keeping Them Well
         </p>
         <p className="text-[#787878] text-[18px] text-center lg:text-start">

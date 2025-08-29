@@ -10,7 +10,7 @@ import BannerHome from "./components/BannerHome";
 
 function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-100 via-white to-emerald-100 py-4">
+    <div className="min-h-screen max-w-[2000px] m-auto  py-4">
       <BannerHome />
       <Hero />
       <Services />

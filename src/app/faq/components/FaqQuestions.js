@@ -41,13 +41,13 @@ function FaqQuestions() {
   };
   return (
     <div className="w-full flex flex-col items-center justify-center px-4 my-6 lg:my-16">
-      <p className="text-lg lg:text-xl uppercase text-center lg:text-start mb-4 md:text-medium md:font-medium text-[#2BE0f7] font-serif">
+      <p className="text-lg lg:text-xl uppercase text-center lg:text-start mb-4 md:text-medium md:font-medium text-teal-400 font-serif">
           faq,s
         </p>
         <p className="text-2xl md:text-3xl lg:text-[38px] xl:text-[42px] xl:font-extrabold text-center lg:text-start font-bold leading-snug mb-6  lg:mb-10 font-serif">
           Frequently Asked Questions
         </p>
-      <div className="w-full max-w-[700px]">
+      <div className="w-full  lg:max-w-[700px] xl:max-w-[800px] 2xl:max-w-[1000px]">
         {faqs.map((faq, index) => (
           <div
             key={index}
@@ -58,7 +58,7 @@ function FaqQuestions() {
               <h2 className=" text-base lg:text-[20px] font-medium  md:font-semibold py-2">{faq.question}</h2>
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-8 h-8 md:w-11 md:h-11 ml-4 sm:ml-2 rounded-full bg-gradient-to-b from-cyan-400 to-blue-900 flex items-center justify-center text-white shadow-md"
+                className="w-8 h-8 md:w-11 md:h-11 ml-4 sm:ml-2 rounded-full bg-teal-400 flex items-center justify-center text-white shadow-md"
               >
                 {openIndexes.includes(index) ? (
                   <Minus className="h-5 w-5 m-2" />

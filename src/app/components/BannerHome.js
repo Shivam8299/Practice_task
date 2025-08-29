@@ -4,9 +4,9 @@ import Buttion from "./Buttion";
 
 export default function BannerHome () {
     return (
-        <div className="flex flex-col lg:flex-row px-4 md:px-8 mb-6 lg:mb-20">
-        <div className="pl-4  w-full lg:w-[45%] flex justify-center items-center flex-col text-center md:text-left">
-          <p className="text-[30px] sm:text-3xl md:text-[42px] lg:text-[48px] xl:text-[66px]  text-center lg:text-start font-bold mb-4">
+        <div className="max-w-[1600px] m-auto flex flex-col lg:flex-row px-4 md:px-8 mb-6 lg:mb-20">
+        <div className="pl-4 xl:pl-6 2xl:pl-16 3xl:pl-0  w-full lg:w-[45%] 2xl:w-[53%] flex justify-center items-center flex-col text-center md:text-left">
+          <p className="text-[30px] sm:text-3xl md:text-[42px] lg:text-[48px] xl:text-[66px]  3xl:text-[55px]  text-center lg:text-start font-bold mb-4">
             Bring Force of Artificial Intelligence To Business
           </p>
           <p className="text-[14px] text-center lg:text-start sm:text-lg lg:text-[20px] text-gray-700 font-serif lg:mr-10 xl:mr-20">

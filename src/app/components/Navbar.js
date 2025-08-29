@@ -22,13 +22,13 @@ function Navbar() {
   ];
 
   return (
-    <nav className="w-full pt-2 lg:mt-0 relative z-50 bg-gradient-to-br from-teal-100 to-emerald-50 border border-teal-100">
+    <nav className="w-full max-w-[1500px] m-auto pt-3 2xl:pt-4 lg:mt-0 relative z-50 ">
       {/* Navbar Main */}
-      <div className="flex justify-between items-center mx-4 mb-8 md:mx-8 lg:mx-10 my-4">
-        <p className="text-2xl sm:text-3xl md:text-4xl font-bold cursor-pointer">Artelligence</p>
+      <div className="flex justify-between  items-center mx-4 mb-8 md:mx-8 lg:mx-10 my-4">
+        <p className="text-2xl sm:text-3xl md:text-4xl font-bold cursor-pointer xl:text-start">Artelligence</p>
 
         {/* Desktop Menu */}
-        <ul className="hidden xl:ml-6 lg:flex gap-6 xl:gap-10 mt-2 xl:text-[18px] text-gray-600">
+        <ul className="hidden xl:ml-6 lg:flex gap-6 xl:gap-10 mt-2 xl:text-[18px] text-gray-600 ">
           <li>
               <Link
                 href="/"

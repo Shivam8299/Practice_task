@@ -44,29 +44,29 @@ const cards = [
 function Services() {
     const [hovered, setHovered] = useState(null);
   return (
-    <div className="mt-10  lg:mt-24 mb-4 md:mb-8 lg:mb-36">
+    <div className=" max-w-[1600px] m-auto mt-10 lg:mt-24 mb-4 md:mb-8 lg:mb-36">
       <div>
-        <p className="text-[#2BE0F7] uppercase text-[18px] font-serif text-center my-6">
+        <p className="text-teal-400 uppercase text-[18px] font-serif text-center my-6">
           Services we provide
         </p>
         <p className="text-2xl md:text-3xl lg:text-[38px] xl:text-[42px] text-center mb-4 max-w-200 m-auto font-bold xl:font-extrabold">
           Our Purpose is To Deliver Excellence in Service and Execution
         </p>
       </div>
-      <div className="grid gap-6 sm:grid-cols-2 p-6 max-w-6xl mx-auto ">
+      <div className="grid gap-6 sm:grid-cols-2 p-4 max-w-6xl mx-auto ">
       {cards.map((card) => (
         <motion.div
           key={card.id}
           onMouseEnter={() => setHovered(card.id)}
           onMouseLeave={() => setHovered(null)}
-          className={`flex flex-row justify-center items-center  gap-4 md:gap-6 border-b-[2px] border-[#2BE0f7] rounded-2xl p-2 sm:p-4 md:p-6 shadow-md cursor-pointer transition-all duration-300 hover:translate-y-1.5   ${
+          className={`flex flex-row justify-center items-center  gap-4 md:gap-6 border-b-[2px] border-[#2BE0f7] rounded-2xl p-2 sm:p-4 md:p-6 lg:p-8 shadow-md cursor-pointer transition-all duration-300 hover:translate-y-1.5   ${
             hovered === card.id
-              ? "bg-gradient-to-r from-cyan-700 to-cyan-600 text-white"
+              ? "bg-gradient-to-r from-teal-700 to-teal-600 text-white"
               : "bg-white"
           }`}
         >
           <div
-            className={`flex items-center justify-center w-20 h-20 rounded-full bg-cyan-100 shrink-0`}
+            className={`flex items-center justify-center w-20 h-20 rounded-full bg-teal-200 shrink-0`}
           >
             <img className="w-40 p-4" src={card.icon}/>
           </div>
@@ -86,7 +86,7 @@ function Services() {
               {card.text}
             </p>
             
-             <p className=" text-sm sm:text-base text-[#2BE0F7] font-serif "> READ MORE</p> 
+             <p className=" text-sm sm:text-base text-teal-400  font-serif "> READ MORE</p> 
            
           </div>
         </motion.div>

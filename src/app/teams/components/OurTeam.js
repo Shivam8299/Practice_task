@@ -58,8 +58,8 @@ function OurTeam() {
   };
 
   return (
-    <div className="px-4 md:px-8 lg:px-16 py-15 bg-white mt-4 md:mt-6  ">
-      <p className="text-[#2BE0f7] text-[18px] md:text-lg font-medium text-center uppercase tracking-wide">
+    <div className="max-w-[1600px] m-auto px-4 md:px-8 lg:px-16 xl:px-8  py-15  mt-4 md:mt-6  ">
+      <p className="text-teal-400 text-[18px] md:text-lg font-medium text-center uppercase tracking-wide">
         Our Staff
       </p>
       <p className="text-2xl md:text-3xl lg:text-[38px] font-semibold lg:font-bold text-[#262626] text-center py-3">
@@ -67,11 +67,11 @@ function OurTeam() {
       </p>
 
       {/* case study Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 lg:px-10 px-5">
+      <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 lg:px-10 px-5">
         {data.map((item, index) => (
           <motion.div
             key={index}
-            className=" h-auto w-auto rounded-3xl shadow-lg"
+            className=" h-auto w-auto rounded-4xl shadow-lg"
             custom={index}
             variants={cardVariants}
             initial="hidden"
@@ -80,25 +80,25 @@ function OurTeam() {
           >
             {/* Overlay */}
             <div className="w-full">
-              <img src={item.image} alt="item" className="mb-6" />
+              <img src={item.image} alt="item" className="mb-6 w-full" />
             </div>
             <p className="text-xl lg:text-2xl text-center font-semibold">
               {item.title}
             </p>
-            <p className=" text-[20px] text-center md:text-lg text-gray-700">
+            <p className=" text-[20px] text-center md:text-lg xl:text-[20px] text-gray-700">
               {item.description}{" "}
             </p>
-            <div className="flex pt-2 pb-6  gap-2 justify-center">
+            <div className="flex pt-2 pb-12  gap-2 justify-center">
               <FaFacebookF
-                className="text-white  hover:-translate-y-2 duration-300 p-2 rounded-full transition cursor-pointer bg-cyan-800"
+                className="text-white  hover:-translate-y-2 duration-300 p-2 rounded-full transition cursor-pointer bg-teal-400"
                 size={36}
               />
               <FaTwitter
-                className="text-white  hover:-translate-y-2 duration-300 p-2 rounded-full transition cursor-pointer bg-cyan-800"
+                className="text-white  hover:-translate-y-2 duration-300 p-2 rounded-full transition cursor-pointer bg-teal-400"
                 size={36}
               />
               <FaLinkedinIn
-                className="text-white  hover:-translate-y-2 duration-300 p-2 rounded-full transition cursor-pointer bg-cyan-800"
+                className="text-white  hover:-translate-y-2 duration-300 p-2 rounded-full transition cursor-pointer bg-teal-400"
                 size={36}
               />
             </div>

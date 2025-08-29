@@ -36,16 +36,16 @@ function Faq() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row px-3 md:px-6 lg:px-16 py-4 md:py-6 lg:py-12 bg-gradient-to-br from-teal-50 to-emerald-50 gap-4 lg:gap-14 pb-6 lg:pb-20 xl:pb-26">
+    <div className="max-w-[1500px] flex flex-col lg:flex-row px-3 md:px-6 m-auto  py-4 md:py-6 lg:py-12  gap-4 lg:gap-8 xl:gap-10 2xl:gap-14 pb-6 lg:pb-20 xl:pb-26 xl:px-16 2xl:px-20 3xl:px-24 ">
       {/* FAQ Section */}
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.3 }}
-        className="w-full md:px-12 lg:px-0  lg:max-w-[500px]"
+        className="w-full md:px-12 lg:px-0  lg:max-w-[500px] xl:lg:max-w-[600px] 2xl:lg:max-w-[750px]"
       >
-        <p className="text-lg lg:text-xl uppercase text-center lg:text-start mb-4 md:text-medium md:font-medium text-[#2BE0f7] font-serif">
+        <p className="text-lg lg:text-xl uppercase text-center lg:text-start mb-4 md:text-medium md:font-medium lg:text-[20px] text-teal-400 font-serif">
           faq,s
         </p>
         <p className="text-2xl md:text-3xl lg:text-[38px] xl:text-[42px] text-center lg:text-start font-bold leading-snug mb-6 lg:mb-4 font-serif">
@@ -60,10 +60,12 @@ function Faq() {
             >
               {/* Question */}
               <div className="flex items-center justify-between">
-                <h2 className="text-[16px] sm:text-[20px] font-semibold py-2">{faq.question}</h2>
+                <h2 className="text-[16px] sm:text-[20px] font-semibold py-2">
+                  {faq.question}
+                </h2>
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-8 h-8 md:w-11 md:h-11 rounded-full bg-gradient-to-b from-cyan-400 to-blue-900 flex items-center justify-center text-white shadow-md"
+                  className="w-8 h-8 md:w-11 md:h-11 rounded-full bg-teal-400 hover:bg-teal-600 flex items-center justify-center text-white shadow-md"
                 >
                   {openIndexes.includes(index) ? (
                     <Minus className="h-5 w-5" />
@@ -83,7 +85,7 @@ function Faq() {
                     transition={{ duration: 0.4, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <p className="text-gray-500 text-base mt-4 border-l-2 border-cyan-400 pl-2">
+                    <p className="text-gray-500 text-base mt-4 border-l-2 border-teal-600 pl-2">
                       {faq.answer}
                     </p>
                   </motion.div>
@@ -95,12 +97,13 @@ function Faq() {
       </motion.div>
 
       {/* Contact Form */}
-      <div className="mt-6 relative z-10 w-full lg:w-1/2 flex flex-col items-center bg-white rounded-3xl border-b-[2px] border-cyan-600">
+      <div className="mt-6 w-full flex flex-col items-center bg-white rounded-3xl border-b-[2px] border-teal-400 ">
         <p className="text-[30px] pt-10 md:text-3xl text-center md:text-start font-bold leading-snug mb-2 font-serif">
           Need any Help!
         </p>
-        <p className="text-gray-500 mt-4 text-[14px] md:text-base lg:text-lg border-cyan-400 pl-4 mb-4 text-center lg:text-start">
-          Eiusmod tempor in labore et dolore magna aliqua ruis ultrices gravida sit amet.
+        <p className="text-gray-500 mt-4 text-[14px] md:text-base lg:text-lg border-teal-400 pl-4 mb-4 text-center lg:text-start">
+          Eiusmod tempor in labore et dolore magna aliqua ruis ultrices gravida
+          sit amet.
         </p>
         <form className="w-full px-2 md:px-4 lg:px-8">
           <input
@@ -125,17 +128,8 @@ function Faq() {
           <Buttion text="Submit Now" />
         </div>
       </div>
-
-      {/* Background Image */}
-      <div>
-        <img
-          className="hidden absolute lg:block lg:right-24"
-          src="https://html.designingmedia.com/artelligence/assets/images/faq-image.png"
-        />
-      </div>
     </div>
   );
 }
 
 export default Faq;
-

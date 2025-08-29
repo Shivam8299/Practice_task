@@ -26,9 +26,9 @@ import Buttion from "@/app/components/Buttion";
 function Information() {
   const [hovered, setHovered] = useState(null);
   return (
-    <div className="flex flex-col lg:flex-row justify-between gap-4 lg:gap-12 px-4 md:px-6 lg:px-20 pb-10 ">
+    <div className=" max-w-[1600px] m-auto flex flex-col lg:flex-row justify-between gap-4 lg:gap-12 px-4 md:px-6 lg:px-20 pb-10 ">
       <div className=" w-full lg:max-w-[40%]">
-        <p className="text-[#2BE0f7] text-lg lg:text-2xl mb-2 text-center lg:text-start">
+        <p className="text-teal-400 text-lg lg:text-2xl mb-2 text-center lg:text-start">
           our details
         </p>
         <h2 className="text-2xl md:text-[42px] text-center lg:text-start text-[#262626] font-bold leading-snug mb-4 ">
@@ -39,10 +39,10 @@ function Information() {
             key={card.id}
             onMouseEnter={() => setHovered(card.id)}
             onMouseLeave={() => setHovered(null)}
-            className="flex flex-row my-10 items-center  gap-4 md:gap-6 border-r-[2px] border-cyan-600 rounded-3xl p-2 sm:p-4 md:p-6 shadow-sm bg-gradient-to-bl from-teal-50 to-bg-white "
+            className="flex flex-row my-10 items-center  gap-4 md:gap-6 border-r-[2px] border-teal-600 rounded-3xl p-2 sm:p-4 md:p-6 shadow-sm bg-gradient-to-bl from-teal-50 to-bg-white "
           >
             <div
-              className={`flex items-center justify-center w-26 h-26 rounded-full bg-cyan-800 shrink-0 hover:transition-all hover:-translate-y-2 duration-300`}
+              className={`flex items-center justify-center w-26 h-26 rounded-full bg-teal-400 shrink-0 hover:transition-all hover:-translate-y-2 duration-300`}
             >
               <img className=" p-4" src={card.icon} />
             </div>
@@ -65,29 +65,29 @@ function Information() {
           </motion.div>
         ))}
       </div>
-      <div className="mt-6 relative z-10 w-full lg:w-1/2 flex flex-col items-center bg-white rounded-3xl border-b-[2px] border-cyan-600">
+      <div className="mt-6 relative z-10 w-full lg:w-1/2 flex flex-col items-center rounded-3xl border-b-[2px] border-teal-600">
         <p className="text-2xl pt-10 md:text-3xl text-center md:text-start font-bold leading-snug mb-2 font-serif ">
           Need any Help!
         </p>
-        <p className="text-gray-500 mt-4 text-lg border-cyan-400 pl-4 mb-4">
+        <p className="text-gray-500 mt-4 text-lg border-teal-600 pl-4 mb-4">
           Eiusmod tempor in labore et dolore magna aliqua ruis ultrices gravida
           sit amet.
         </p>
         <form className="w-full px-4 md:px-6 lg:px-8">
           <input
-            className="p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
+            className="p-3 outline-none border border-teal-200 rounded-xl w-full mb-4"
             placeholder="Your name:"
           />
           <input
-            className="p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
+            className="p-3 outline-none border border-teal-200 rounded-xl w-full mb-4"
             placeholder="Email:"
           />
           <input
-            className="p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
+            className="p-3 outline-none border border-teal-200 rounded-xl w-full mb-4"
             placeholder="Phone:"
           />
           <textarea
-            className="p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
+            className="p-3 outline-none border border-teal-200 rounded-xl w-full mb-4"
             rows="5"
             placeholder="Message"
           ></textarea>
@@ -95,12 +95,6 @@ function Information() {
         <div className="mb-8">
           <Buttion text="Submit Now" />
         </div>
-      </div>
-      <div>
-        <img
-          className=" hidden absolute lg:block lg:right-24 "
-          src="https://html.designingmedia.com/artelligence/assets/images/faq-image.png"
-        />
       </div>
     </div>
   );
