@@ -59,7 +59,7 @@ function Services() {
           key={card.id}
           onMouseEnter={() => setHovered(card.id)}
           onMouseLeave={() => setHovered(null)}
-          className={`flex flex-row justify-center items-center  gap-4 md:gap-6 border-b-[2px] border-[#2BE0f7] rounded-2xl p-2 sm:p-4 md:p-6 lg:p-8 shadow-md cursor-pointer transition-all duration-300 hover:translate-y-1.5   ${
+          className={`flex flex-row justify-center items-center  gap-4 md:gap-6 border-b-[2px] border-teal-600 rounded-2xl p-2 sm:p-4 md:p-6 lg:p-8 shadow-md cursor-pointer transition-all duration-300 hover:translate-y-1.5   ${
             hovered === card.id
               ? "bg-gradient-to-r from-teal-700 to-teal-600 text-white"
               : "bg-white"

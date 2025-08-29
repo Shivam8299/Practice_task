@@ -94,7 +94,7 @@ function Testimonials() {
               “{text}”
             </p>
 
-            <p className="text-[#2BE0f7] my-4 text-lg lg:ml-12 md:ml-10">
+            <p className="text-teal-400 my-4 text-lg lg:ml-12 md:ml-10">
               {name}
             </p>
             <p className="text-lg text-gray-600 lg:ml-12 md:ml-10">{role}</p>
