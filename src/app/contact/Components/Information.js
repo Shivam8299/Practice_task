@@ -26,7 +26,7 @@ import Buttion from "@/app/components/Buttion";
 function Information() {
   const [hovered, setHovered] = useState(null);
   return (
-    <div className="flex flex-col lg:flex-row justify-between gap-4 lg:gap-12 px-2 md:px-6 lg:px-20 pb-10 ">
+    <div className="flex flex-col lg:flex-row justify-between gap-4 lg:gap-12 px-4 md:px-6 lg:px-20 pb-10 ">
       <div className=" w-full lg:max-w-[40%]">
         <p className="text-[#2BE0f7] text-lg lg:text-2xl mb-2 text-center lg:text-start">
           our details
@@ -73,7 +73,7 @@ function Information() {
           Eiusmod tempor in labore et dolore magna aliqua ruis ultrices gravida
           sit amet.
         </p>
-        <form className="w-full px-2 md:px-4 lg:px-8">
+        <form className="w-full px-4 md:px-6 lg:px-8">
           <input
             className="p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
             placeholder="Your name:"

@@ -60,7 +60,7 @@ function Faq() {
             >
               {/* Question */}
               <div className="flex items-center justify-between">
-                <h2 className="text-[20px] font-semibold py-2">{faq.question}</h2>
+                <h2 className="text-[16px] sm:text-[20px] font-semibold py-2">{faq.question}</h2>
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="w-8 h-8 md:w-11 md:h-11 rounded-full bg-gradient-to-b from-cyan-400 to-blue-900 flex items-center justify-center text-white shadow-md"
@@ -96,32 +96,32 @@ function Faq() {
 
       {/* Contact Form */}
       <div className="mt-6 relative z-10 w-full lg:w-1/2 flex flex-col items-center bg-white rounded-3xl border-b-[2px] border-cyan-600">
-        <p className="text-2xl pt-10 md:text-3xl text-center md:text-start font-bold leading-snug mb-2 font-serif">
+        <p className="text-[30px] pt-10 md:text-3xl text-center md:text-start font-bold leading-snug mb-2 font-serif">
           Need any Help!
         </p>
-        <p className="text-gray-500 mt-4 text-lg border-cyan-400 pl-4 mb-4">
+        <p className="text-gray-500 mt-4 text-[14px] md:text-base lg:text-lg border-cyan-400 pl-4 mb-4 text-center lg:text-start">
           Eiusmod tempor in labore et dolore magna aliqua ruis ultrices gravida sit amet.
         </p>
         <form className="w-full px-2 md:px-4 lg:px-8">
           <input
-            className="p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
+            className=" p-2 md:p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
             placeholder="Your name:"
           />
           <input
-            className="p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
+            className="p-2 md:p-3outline-none border border-cyan-200 rounded-xl w-full mb-4"
             placeholder="Email:"
           />
           <input
-            className="p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
+            className="p-2 md:p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
             placeholder="Phone:"
           />
           <textarea
-            className="p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
-            rows="5"
+            className="p-2 md:p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
+            rows="4"
             placeholder="Message"
           ></textarea>
         </form>
-        <div className="mb-8">
+        <div className=" my-6 md:my-8">
           <Buttion text="Submit Now" />
         </div>
       </div>

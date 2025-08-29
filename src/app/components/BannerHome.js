@@ -9,7 +9,7 @@ export default function BannerHome () {
           <p className="text-[30px] sm:text-3xl md:text-[42px] lg:text-[48px] xl:text-[66px]  text-center lg:text-start font-bold mb-4">
             Bring Force of Artificial Intelligence To Business
           </p>
-          <p className="text-[14px] sm:text-lg lg:text-[20px] text-gray-700 font-serif lg:mr-10 xl:mr-20">
+          <p className="text-[14px] text-center lg:text-start sm:text-lg lg:text-[20px] text-gray-700 font-serif lg:mr-10 xl:mr-20">
             Quis autem vel eum iure reprehenderit aui in ea voluptate velit esse
             ruam nihil molestiae conseuatur.
           </p>

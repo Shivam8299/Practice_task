@@ -23,7 +23,7 @@ export default function AboutBanner({ text,text3, about, details, img, page}) {
         <p className="text-[30px] sm:text-4xl md:text-[42px] lg:text-[66px] text-center  lg:text-start font-bold mb-4">
           {about}
         </p>
-        <p className="text-[14px] sm:text-lg lg:text-[20px]  text-gray-700 font-serif">
+        <p className="text-[14px] sm:text-lg lg:text-[20px] text-center lg:text-start text-gray-700 font-serif">
           {details}
         </p>
         <div className="text-center lg:text-start">

@@ -22,7 +22,7 @@ function Navbar() {
   ];
 
   return (
-    <nav className="w-full mt-2 lg:mt-0 relative z-50 bg-gradient-to-br from-teal-100 to-emerald-50 border border-teal-100">
+    <nav className="w-full pt-2 lg:mt-0 relative z-50 bg-gradient-to-br from-teal-100 to-emerald-50 border border-teal-100">
       {/* Navbar Main */}
       <div className="flex justify-between items-center mx-4 mb-8 md:mx-8 lg:mx-10 my-4">
         <p className="text-2xl sm:text-3xl md:text-4xl font-bold cursor-pointer">Artelligence</p>
@@ -112,29 +112,22 @@ function Navbar() {
           className="lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          {menuOpen ? <X size={35} /> : <Menu size={40} />}
         </button>
       </div>
 
       {/* Mobile Side Drawer */}
       <div
-        className={`lg:hidden fixed top-0 right-0  w-64 h-auto pb-10 bg-white shadow-lg border-l transform transition-transform duration-300 ease-in-out z-50
-        ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`lg:hidden fixed top-16 right-0  w-50 h-auto pb-10 bg-white shadow-lg  transform transition-transform duration-500 ease-in-out z-50 
+        ${menuOpen ? "translate-x-0 right-6" : "translate-x-full"}`}
       >
-        <button
-          className="absolute top-4 right-4 p-2 text-gray-700"
-          onClick={() => setMenuOpen(false)}
-        >
-          <X size={24} />
-        </button>
-
         <div>
-          <ul className="flex flex-col mt-16 gap-6 mx-6 mb-5">
+          <ul className=" w-full flex flex-col gap-4 pl-5 ">
           <li>
               <Link
                 href="/"
                 onClick={() => setMenuOpen(false)}
-                className={`transition ${pathname === '/' ? "text-green-600 font-semibold" : "hover:text-teal-600"}`}>
+                className={`transition w-full ${pathname === '/' ? "text-green-600 font-semibold " : "hover:text-teal-600"}`}>
                 Home
               </Link>
           </li>
@@ -198,7 +191,7 @@ function Navbar() {
               </Link>
           </li>
         </ul>
-          <p  onClick={() => setMenuOpen(false)} className={`transition  hover:font-semibold hover:text-teal-600 px-6 cursor-pointer "`}>Let's Talk</p>
+          <p  onClick={() => setMenuOpen(false)} className={`transition  hover:font-semibold hover:text-teal-600 px-6 cursor-pointer mt-3 "`}>Let's Talk</p>
         </div>
       </div>
     </nav>
