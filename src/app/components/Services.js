@@ -24,18 +24,18 @@ function Services() {
 ]
 
   return (
-    <div className=" max-w-[1450px] m-auto flex flex-col lg:flex-row justify-between gap-14 lg:gap-6 items-center  my-12 px-4 md:px-6 lg:px-10 py-12">
+    <div className=" max-w-[1450px] m-auto  flex flex-col lg:flex-row justify-between gap-14 lg:gap-6 items-center  my-12 px-4 md:px-6 lg:px-12 xl:px-16 2xl:px-20 py-12">
       {/* LEFT SECTION */}
       <motion.div 
       initial={{ opacity: 0, x: -100 }} // start hidden & from right
       whileInView={{ opacity: 1, x: 0 }} // animate to visible & normal position
       transition={{ duration: 1, ease: "easeOut" }} // smooth animation
       viewport={{ once: true, amount: 0.3 }}
-      className="w-full lg:w-1/2 lg:ml-13 flex flex-col justify-center text-center lg:text-left">
+      className="w-full lg:w-[40%] xl:1/2 m-auto flex flex-col justify-center text-center lg:text-left">
         <p className="text-teal-400 text-lg lg:text-xl mb-2 text-center lg:text-start">
           SERVICES WE PROVIDE
         </p>
-        <h2 className="text-2xl md:text-[32] md:px-20 lg:px-0 lg:text-[42px] 2xl:text-[46px] text-[#262626] font-bold leading-snug mb-4 ">
+        <h2 className="text-2xl md:text-[32] md:px-20 lg:px-0 lg:text-[42px]   2xl:text-[46px] text-[#262626] font-bold leading-snug mb-4 ">
           Our Purpose is To Deliver Excellence in Service and Execution
         </h2>
         <p className="text-[#787878] mb-6  text-[18px]">
@@ -50,7 +50,7 @@ function Services() {
       </motion.div>
 
       {/* RIGHT SECTION - CARDS */}
-      <div className="w-full lg:w-1/2  grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-0 mt-10 md:mt-4 px-4 hover:text-white  ">
+      <div className="w-full lg:w-[55%] xl:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-0 mt-10 md:mt-4 px-4 hover:text-white  ">
         {services.map((item, i) =>
           i % 2 !== 0 ? (
             <div
