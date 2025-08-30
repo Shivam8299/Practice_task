@@ -102,7 +102,7 @@ function Testimonials() {
         </AnimatePresence>
 
         {/* Navigation Arrows - FIXED, not moving with card */}
-        <div className="absolute inset-y-0 -right-4 flex items-center flex-col justify-center gap-6 z-20">
+        <div className="absolute inset-y-0 -right-1 sm:-right-4  flex items-center flex-col justify-center gap-6 z-20">
           <button
             onClick={() => {
               prevSlide();

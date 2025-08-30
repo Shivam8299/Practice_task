@@ -85,7 +85,7 @@ function CaseStudies() {
 
             {/* Content */}
             <div className="absolute bottom-0 p-4 text-white z-10">
-              <button className="text-xs md:text-sm font-semibold px-3 py-1 bg-gradient-to-r from-gray-500 to-gray-700 rounded-lg">
+              <button className="text-xs md:text-sm font-semibold px-3 py-1 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-lg">
                 {item.title}
               </button>
               <p className="mt-3 text-[20px] md:text-lg font-semibold leading-snug">
@@ -93,7 +93,7 @@ function CaseStudies() {
               </p>
 
               {/* Arrow Button */}
-              <span className="mt-4 flex items-center justify-center w-9 h-9 rounded-full bg-white text-xl text-gray-700 ">
+              <span className="mt-4 flex items-center justify-center w-9 h-9 rounded-full bg-teal-400 text-xl text-white ">
                 <FiChevronRight />
               </span>
             </div>

@@ -55,7 +55,7 @@ function Services() {
           i % 2 !== 0 ? (
             <div
               key={i}
-              className="rounded-3xl md:w-auto  lg:w-55 xl:w-60 2xl:w-65 md:h-70 lg:h-80 border-b-[3px]  border-teal-600 p-6 shadow-lg bg-white lg:mt-8 hover:text-white hover:bg-gradient-to-r from-[#012038] to-teal-300  transition-transform duration-300 hover:-translate-y-2 flex flex-col justify-center items-center text-center"
+              className="rounded-3xl md:w-auto  lg:w-55 xl:w-60 2xl:w-65 md:h-70 lg:h-80 border-b-[2px]  border-teal-600 p-6 shadow-lg bg-white lg:mt-8 hover:text-white hover:bg-gradient-to-r from-[#012038] to-teal-300  transition-transform duration-300 hover:-translate-y-2 flex flex-col justify-center items-center text-center"
             >
               <img
                 className="rounded-full w-20 h-20 mb-4 p-4 hover:bg-white bg-teal-400"
@@ -71,7 +71,7 @@ function Services() {
           ) : (
             <div
               key={i}
-              className=" md:h-70 lg:w-55 xl:w-60 2xl:w-65 lg:h-80 rounded-3xl p-5 shadow-md  hover:text-white hover:bg-gradient-to-r from-[#012038] to-teal-300 flex flex-col justify-center items-center text-center border-b-[2px] border-cyan-600 transition-transform duration-300 hover:-translate-y-2"
+              className=" md:h-70 lg:w-55 xl:w-60 2xl:w-65 lg:h-80 rounded-3xl p-5 shadow-md  hover:text-white hover:bg-gradient-to-r from-[#012038] to-teal-300 flex flex-col justify-center items-center text-center border-b-[2px] border-teal-600 transition-transform duration-300 hover:-translate-y-2"
             >
               <img
                 className="rounded-full w-20 h-20 mb-4 p-4 hover:bg-white bg-teal-400"
