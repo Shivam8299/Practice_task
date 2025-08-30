@@ -45,10 +45,10 @@ function Faq() {
         viewport={{ once: true, amount: 0.3 }}
         className="w-full md:px-12 lg:px-0  lg:max-w-[500px] xl:lg:max-w-[600px] 2xl:lg:max-w-[750px]"
       >
-        <p className="text-lg lg:text-xl uppercase text-center lg:text-start mb-4 md:text-medium md:font-medium lg:text-[20px] text-teal-400 font-serif">
+        <p className="text-lg lg:text-xl uppercase text-center lg:text-start mb-4 md:text-medium md:font-medium lg:text-[20px] text-teal-400 ">
           faq,s
         </p>
-        <p className="text-2xl md:text-3xl lg:text-[38px] xl:text-[42px] text-center lg:text-start font-bold leading-snug mb-6 lg:mb-4 font-serif">
+        <p className="text-2xl md:text-3xl lg:text-[38px] xl:text-[42px] text-center lg:text-start font-bold leading-snug mb-6 lg:mb-4 ">
           Frequently Asked Questions
         </p>
 
@@ -60,7 +60,7 @@ function Faq() {
             >
               {/* Question */}
               <div className="flex items-center justify-between">
-                <h2 className="text-[16px] sm:text-[20px] font-semibold py-2">
+                <h2 className="text-[16px] sm:text-[20px] py-2">
                   {faq.question}
                 </h2>
                 <button
@@ -98,7 +98,7 @@ function Faq() {
 
       {/* Contact Form */}
       <div className="mt-6 w-full flex flex-col items-center bg-white rounded-3xl border-b-[2px] border-teal-400 ">
-        <p className="text-[30px] pt-10 md:text-3xl text-center md:text-start font-bold leading-snug mb-2 font-serif">
+        <p className="text-[30px] pt-10 md:text-3xl text-center md:text-start font-bold leading-snug mb-2 ">
           Need any Help!
         </p>
         <p className="text-gray-500 mt-4 text-[14px] md:text-base lg:text-lg border-teal-400 pl-4 mb-4 text-center lg:text-start">
@@ -109,11 +109,14 @@ function Faq() {
           <input
             className=" p-2 md:p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
             placeholder="Your name:"
+            required
           />
           <input
-            className="p-2 md:p-3outline-none border border-cyan-200 rounded-xl w-full mb-4"
+            className="p-2 md:p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
             placeholder="Email:"
+            required
           />
+
           <input
             className="p-2 md:p-3 outline-none border border-cyan-200 rounded-xl w-full mb-4"
             placeholder="Phone:"
